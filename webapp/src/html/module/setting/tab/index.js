@@ -43,7 +43,7 @@ NEJ.define([
      * @return {Void}
      */
     _pro.__onRefresh = function(_options){
-        this.__supOnRefresh(_options);
+        this.__super(_options);
         this.__tbview._$match(
             this.__doParseUMIFromOpt(_options)
         );
