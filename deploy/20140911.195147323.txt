@@ -1,0 +1,630 @@
+[INFO] 2014-09-11 19:51:47.324	-	parse D:/workspace/git/nej-demo/deploy/release.conf
+[INFO] 2014-09-11 19:51:47.328	-	config -> {"DIR_CONFIG":"D:/workspace/git/nej-demo/deploy/","DIR_LOGGER":"D:/workspace/git/nej-demo/deploy/20140911.195147323.txt","DIR_TEMPORARY":"D:/workspace/git/nej-demo/deploy/20140911.195147323/","DIR_WEBROOT":"D:/workspace/git/nej-demo/webapp/","DIR_SOURCE":"D:/workspace/git/nej-demo/webapp/src/html/","DIR_OUTPUT":"D:/workspace/git/nej-demo/webapp/pub/","NEJ_DIR":"D:/workspace/git/NEJ/src/","FILE_SUFFIXE":{},"OBF_MAX_JS_INLINE_SIZE":100,"DIR_SOURCE_TP":"","DIR_OUTPUT_TP":"","DIR_OUTPUT_STATIC":"D:/workspace/git/nej-demo/webapp/pub/","DIR_STATIC":"D:/workspace/git/nej-demo/webapp/res/","NEJ_PLATFORM":"","ALIAS_DICTIONARY":{},"ALIAS_START_TAG":"${","ALIAS_END_TAG":"}","ALIAS_REG":{},"MANIFEST_OUTPUT":"","MANIFEST_FILTER":"","MANIFEST_TEMPLATE":"CACHE MANIFEST\n#VERSION = #<VERSION>\n\nCACHE:\n#<CACHE_LIST>\n\nNETWORK:\n*\n\nFALLBACK:","FILE_FILTER":{},"FILE_CHARSET":"utf-8","RAND_VERSION":false,"STATIC_VERSION":false,"OPT_IMAGE_FLAG":false,"OPT_IMAGE_QUALITY":100,"X_NOCOMPRESS":false,"X_NOPARSE_FLAG":0,"X_NOCORE_STYLE":false,"X_NOCORE_SCRIPT":false,"X_NOT_CLEAR_TEMP":false,"X_AUTO_EXLINK_PATH":false,"X_MODULE_WRAPPER":"%s","X_RELEASE_MODE":"online","DM_STATIC_CS":"/","DM_STATIC_JS":"/","DM_STATIC_MF":"/","DM_STATIC_MR":"","DM_STATIC_RR":true,"DM_STATIC":"/","DM_STATIC_CS_RR":true,"DM_STATIC_JS_RR":true,"DM_STATIC_MF_RR":true,"DIR_STATIC_REG":{},"OBF_LEVEL":3,"OBF_MAX_CS_INLINE_SIZE":50,"OBF_NAME_BAGS":"D:/workspace/git/nej-demo/deploy/names.json","OBF_COMPATIBLE":true,"OBF_SOURCE_MAP":false,"CORE_LIST_JS":"","CORE_LIST_CS":"","CORE_MASK_JS":"","CORE_MASK_CS":""}
+[INFO] 2014-09-11 19:51:47.336	-	parse D:/workspace/git/nej-demo/webapp/src/html/app.html
+[DBUG] 2014-09-11 19:51:47.348	-	D:/workspace/git/nej-demo/webapp/src/html/app.html -> ["window.NEJ_CONF = {root:'../../res/'};","NEJ.define([\n'util/dispatcher/dispatcher'\n],function(_t){\n/* start up dispatcher */\n_t._$startup({\nrules:{\nrewrite:{\n'404':'/m/blog/list/',\n'/m/blog/list/':'/m/blog/',\n'/m/setting/account/':'/m/setting/'\n},\ntitle:{\n'/m/blog/tag/':'日志标签',\n'/m/blog/list/':'日志列表',\n'/m/setting/permission/':'权限管理',\n'/m/setting/account/':'基本资料',\n'/m/setting/account/edu/':'教育经历'\n},\nalias:{\n'system-tab':'/?/tab/',\n'blog-tab':'/?/blog/tab/',\n'blog-list-box':'/?/blog/box/',\n'blog-list-tag':'/?/blog/tag/',\n'blog-list':'/?/blog/list/',\n'setting-tab':'/?/setting/tab/',\n'setting-account-tab':'/?/setting/account/tab/',\n\n'layout-system':'/m',\n'layout-blog':'/m/blog',\n'layout-blog-list':'/m/blog/list/',\n'layout-setting':'/m/setting',\n'layout-setting-account':'/m/setting/account',\n\n'blog-tag':['/m/blog/tag/','/m/setting/tag/'],\n'setting-edu':'/m/setting/account/edu/',\n'setting-profile':'/m/setting/account/',\n'setting-permission':'/m/setting/permission/'\n}\n},\nmodules:{\n'/?/tab/':'module/tab/index.html',\n'/?/blog/tab/':'module/blog/tab/index.html',\n'/?/blog/box/':'module/blog/list.box/index.html',\n'/?/blog/tag/':'module/blog/list.tag/index.html',\n'/?/blog/list/':'module/blog/list/index.html',\n'/?/setting/tab/':'module/setting/tab/index.html',\n'/?/setting/account/tab/':'module/setting/account.tab/index.html',\n\n'/m':{\nmodule:'module/layout/system/index.html',\ncomposite:{\ntab:'/?/tab/'\n}\n},\n'/m/blog':{\nmodule:'module/layout/blog/index.html',\ncomposite:{\ntab:'/?/blog/tab/'\n}\n},\n'/m/blog/list/':{\nmodule:'module/layout/blog.list/index.html',\ncomposite:{\nbox:'/?/blog/box/',\ntag:'/?/blog/tag/',\nlist:'/?/blog/list/'\n}\n},\n'/m/blog/tag/':'module/blog/tag/index.html',\n\n'/m/setting':{\nmodule:'module/layout/setting/index.html',\ncomposite:{\ntab:'/?/setting/tab/'\n}\n},\n'/m/setting/account':{\nmodule:'module/layout/setting.account/index.html',\ncomposite:{\ntab:'/?/setting/account/tab/'\n}\n},\n'/m/setting/account/':'module/setting/profile/index.html',\n'/m/setting/account/edu/':'module/setting/edu/index.html',\n'/m/setting/permission/':'module/setting/permission/index.html',\n'/m/setting/tag/':'module/blog/tag/index.html'\n},\n/*\nmodules:{\n'/?/tab/':'module/tab/index.html',\n'/?/blog/tab/':'module/blog.html',\n'/?/blog/box/':'module/blog.html',\n'/?/blog/tag/':'module/blog.html',\n'/?/blog/list/':'module/blog.html',\n'/?/setting/tab/':'module/setting.html',\n'/?/setting/account/tab/':'module/setting.html',\n\n'/m':{\nmodule:'module/layout.html',\ncomposite:{\ntab:'/?/tab/'\n}\n},\n'/m/blog':{\nmodule:'module/layout.html',\ncomposite:{\ntab:'/?/blog/tab/'\n}\n},\n'/m/blog/list/':{\nmodule:'module/layout.html',\ncomposite:{\nbox:'/?/blog/box/',\ntag:'/?/blog/tag/',\nlist:'/?/blog/list/'\n}\n},\n'/m/blog/tag/':'module/blog.html',\n\n'/m/setting':{\nmodule:'module/layout.html',\ncomposite:{\ntab:'/?/setting/tab/'\n}\n},\n'/m/setting/account':{\nmodule:'module/layout.html',\ncomposite:{\ntab:'/?/setting/account/tab/'\n}\n},\n'/m/setting/account/':'module/setting.html',\n'/m/setting/account/edu/':'module/setting.html',\n'/m/setting/permission/':'module/setting.html'\n},\n*/\nonbeforechange:function(_options){\nvar _umi = _options.path||'';\nif (!!_umi&&\n_umi.indexOf('/?')<0&&\n_umi.indexOf('/m')<0)\n_options.path = '/m'+_umi;\n}\n});\n});"]
+[INFO] 2014-09-11 19:51:47.364	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/blog/list/index.html
+[DBUG] 2014-09-11 19:51:47.365	-	D:/workspace/git/nej-demo/webapp/src/html/module/blog/list/index.html -> ["D:/workspace/git/nej-demo/webapp/src/html/module/blog/list/index.js"]
+[INFO] 2014-09-11 19:51:47.366	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.box/index.html
+[DBUG] 2014-09-11 19:51:47.368	-	D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.box/index.html -> ["D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.box/index.js"]
+[INFO] 2014-09-11 19:51:47.369	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.tag/index.html
+[DBUG] 2014-09-11 19:51:47.371	-	D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.tag/index.html -> ["D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.tag/index.js"]
+[INFO] 2014-09-11 19:51:47.373	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/blog/tab/index.html
+[DBUG] 2014-09-11 19:51:47.374	-	D:/workspace/git/nej-demo/webapp/src/html/module/blog/tab/index.html -> ["D:/workspace/git/nej-demo/webapp/src/html/module/blog/tab/index.js"]
+[INFO] 2014-09-11 19:51:47.376	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/blog/tag/index.html
+[DBUG] 2014-09-11 19:51:47.377	-	D:/workspace/git/nej-demo/webapp/src/html/module/blog/tag/index.html -> ["D:/workspace/git/nej-demo/webapp/src/html/module/blog/tag/index.js"]
+[INFO] 2014-09-11 19:51:47.379	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/blog.html
+[WARN] 2014-09-11 19:51:47.381	-	external template not exist -> D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.class/index.html
+[DBUG] 2014-09-11 19:51:47.381	-	D:/workspace/git/nej-demo/webapp/src/html/module/blog.html -> undefined
+[INFO] 2014-09-11 19:51:47.383	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog/index.html
+[DBUG] 2014-09-11 19:51:47.384	-	D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog/index.html -> ["D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog/index.js"]
+[INFO] 2014-09-11 19:51:47.386	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog.list/index.html
+[DBUG] 2014-09-11 19:51:47.387	-	D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog.list/index.html -> ["D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog.list/index.js"]
+[INFO] 2014-09-11 19:51:47.388	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting/index.html
+[DBUG] 2014-09-11 19:51:47.390	-	D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting/index.html -> ["D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting/index.js"]
+[INFO] 2014-09-11 19:51:47.391	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting.account/index.html
+[DBUG] 2014-09-11 19:51:47.392	-	D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting.account/index.html -> ["D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting.account/index.js"]
+[INFO] 2014-09-11 19:51:47.394	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/layout/system/index.html
+[DBUG] 2014-09-11 19:51:47.395	-	D:/workspace/git/nej-demo/webapp/src/html/module/layout/system/index.html -> ["D:/workspace/git/nej-demo/webapp/src/html/module/layout/system/index.js"]
+[INFO] 2014-09-11 19:51:47.397	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/layout.html
+[DBUG] 2014-09-11 19:51:47.398	-	D:/workspace/git/nej-demo/webapp/src/html/module/layout.html -> undefined
+[INFO] 2014-09-11 19:51:47.400	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/setting/account.tab/index.html
+[DBUG] 2014-09-11 19:51:47.401	-	D:/workspace/git/nej-demo/webapp/src/html/module/setting/account.tab/index.html -> ["D:/workspace/git/nej-demo/webapp/src/html/module/setting/account.tab/index.js"]
+[INFO] 2014-09-11 19:51:47.403	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/setting/edu/index.html
+[DBUG] 2014-09-11 19:51:47.405	-	D:/workspace/git/nej-demo/webapp/src/html/module/setting/edu/index.html -> ["D:/workspace/git/nej-demo/webapp/src/html/module/setting/edu/index.js"]
+[INFO] 2014-09-11 19:51:47.406	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/setting/permission/index.html
+[DBUG] 2014-09-11 19:51:47.408	-	D:/workspace/git/nej-demo/webapp/src/html/module/setting/permission/index.html -> ["D:/workspace/git/nej-demo/webapp/src/html/module/setting/permission/index.js"]
+[INFO] 2014-09-11 19:51:47.410	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/setting/profile/index.html
+[DBUG] 2014-09-11 19:51:47.411	-	D:/workspace/git/nej-demo/webapp/src/html/module/setting/profile/index.html -> ["D:/workspace/git/nej-demo/webapp/src/html/module/setting/profile/index.js"]
+[INFO] 2014-09-11 19:51:47.413	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/setting/tab/index.html
+[DBUG] 2014-09-11 19:51:47.414	-	D:/workspace/git/nej-demo/webapp/src/html/module/setting/tab/index.html -> ["D:/workspace/git/nej-demo/webapp/src/html/module/setting/tab/index.js"]
+[INFO] 2014-09-11 19:51:47.416	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/setting.html
+[DBUG] 2014-09-11 19:51:47.418	-	D:/workspace/git/nej-demo/webapp/src/html/module/setting.html -> undefined
+[INFO] 2014-09-11 19:51:47.419	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/tab/index.html
+[DBUG] 2014-09-11 19:51:47.420	-	D:/workspace/git/nej-demo/webapp/src/html/module/tab/index.html -> ["D:/workspace/git/nej-demo/webapp/src/html/module/tab/index.js"]
+[WARN] 2014-09-11 19:51:47.423	-	see uri as js source code -> window.NEJ_CONF = {root:'../../res/'}; ...
+[DBUG] 2014-09-11 19:51:47.424	-	dependency result: js-code-1410436307422 -> undefined
+[WARN] 2014-09-11 19:51:47.426	-	see uri as js source code -> NEJ.define([ 'util/dispatcher/dispatcher' ],function(_t){ /* start up dispatcher */ _t._$startup({ r ...
+[DBUG] 2014-09-11 19:51:47.428	-	dependency result: js-code-1410436307423 -> ["D:/workspace/git/NEJ/src/util/dispatcher/dispatcher.js"]
+[INFO] 2014-09-11 19:51:47.429	-	parse D:/workspace/git/NEJ/src/util/dispatcher/dispatcher.js
+[DBUG] 2014-09-11 19:51:47.432	-	dependency result: D:/workspace/git/NEJ/src/util/dispatcher/dispatcher.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/base/event.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/util/history/history.js","D:/workspace/git/NEJ/src/util/template/tpl.js","D:/workspace/git/NEJ/src/util/event.js","D:/workspace/git/NEJ/src/util/dispatcher/dsp/util.js","D:/workspace/git/NEJ/src/util/dispatcher/dsp/node.js","D:/workspace/git/NEJ/src/util/dispatcher/dsp/group.js","D:/workspace/git/NEJ/src/util/dispatcher/dsp/single.js","D:/workspace/git/NEJ/src/util/dispatcher/module.js"]
+[INFO] 2014-09-11 19:51:47.435	-	parse D:/workspace/git/NEJ/src/base/global.js
+[DBUG] 2014-09-11 19:51:47.437	-	dependency result: D:/workspace/git/NEJ/src/base/global.js -> null
+[INFO] 2014-09-11 19:51:47.438	-	parse D:/workspace/git/NEJ/src/base/klass.js
+[DBUG] 2014-09-11 19:51:47.440	-	dependency result: D:/workspace/git/NEJ/src/base/klass.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/platform/util.patch.js"]
+[INFO] 2014-09-11 19:51:47.441	-	parse D:/workspace/git/NEJ/src/base/platform/util.patch.js
+[INFO] 2014-09-11 19:51:47.442	-	parse NEJ.patch for D:/workspace/git/NEJ/src/base/platform/util.patch.js
+[INFO] 2014-09-11 19:51:47.443	-	compare platform td|gk|wk|pt with expression TR<=4.0
+[INFO] 2014-09-11 19:51:47.445	-	TR<=4.0 -> _k_.engine=='trident'&&_k_.release<='4.0'
+[DBUG] 2014-09-11 19:51:47.446	-	dependency result: D:/workspace/git/NEJ/src/base/platform/util.patch.js -> ["D:/workspace/git/NEJ/src/base/platform/util.js","D:/workspace/git/NEJ/src/base/platform.js"]
+[INFO] 2014-09-11 19:51:47.447	-	parse D:/workspace/git/NEJ/src/base/platform/util.js
+[DBUG] 2014-09-11 19:51:47.448	-	dependency result: D:/workspace/git/NEJ/src/base/platform/util.js -> null
+[INFO] 2014-09-11 19:51:47.449	-	parse D:/workspace/git/NEJ/src/base/platform.js
+[DBUG] 2014-09-11 19:51:47.451	-	dependency result: D:/workspace/git/NEJ/src/base/platform.js -> ["D:/workspace/git/NEJ/src/base/global.js"]
+[INFO] 2014-09-11 19:51:47.452	-	parse D:/workspace/git/NEJ/src/base/element.js
+[DBUG] 2014-09-11 19:51:47.462	-	dependency result: D:/workspace/git/NEJ/src/base/element.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/constant.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/base/event.js","D:/workspace/git/NEJ/src/base/chain.js","D:/workspace/git/NEJ/src/base/platform/element.patch.js"]
+[INFO] 2014-09-11 19:51:47.464	-	parse D:/workspace/git/NEJ/src/base/constant.js
+[DBUG] 2014-09-11 19:51:47.465	-	dependency result: D:/workspace/git/NEJ/src/base/constant.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/config.js"]
+[INFO] 2014-09-11 19:51:47.467	-	parse D:/workspace/git/NEJ/src/base/config.js
+[DBUG] 2014-09-11 19:51:47.468	-	dependency result: D:/workspace/git/NEJ/src/base/config.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/platform/config.patch.js"]
+[INFO] 2014-09-11 19:51:47.469	-	parse D:/workspace/git/NEJ/src/base/platform/config.patch.js
+[INFO] 2014-09-11 19:51:47.470	-	parse NEJ.patch for D:/workspace/git/NEJ/src/base/platform/config.patch.js
+[INFO] 2014-09-11 19:51:47.471	-	compare platform td|gk|wk|pt with expression TR
+[INFO] 2014-09-11 19:51:47.472	-	TR -> _k_.engine=='trident'
+[INFO] 2014-09-11 19:51:47.473	-	compare platform td|gk|wk|pt with expression TR<=3.0
+[INFO] 2014-09-11 19:51:47.474	-	TR<=3.0 -> _k_.engine=='trident'&&_k_.release<='3.0'
+[DBUG] 2014-09-11 19:51:47.475	-	dependency result: D:/workspace/git/NEJ/src/base/platform/config.patch.js -> ["D:/workspace/git/NEJ/src/base/platform/config.js","D:/workspace/git/NEJ/src/base/platform.js"]
+[INFO] 2014-09-11 19:51:47.476	-	parse D:/workspace/git/NEJ/src/base/platform/config.js
+[DBUG] 2014-09-11 19:51:47.477	-	dependency result: D:/workspace/git/NEJ/src/base/platform/config.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/util.js"]
+[INFO] 2014-09-11 19:51:47.479	-	parse D:/workspace/git/NEJ/src/base/util.js
+[DBUG] 2014-09-11 19:51:47.482	-	dependency result: D:/workspace/git/NEJ/src/base/util.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/platform/util.patch.js"]
+[INFO] 2014-09-11 19:51:47.483	-	parse D:/workspace/git/NEJ/src/base/event.js
+[DBUG] 2014-09-11 19:51:47.486	-	dependency result: D:/workspace/git/NEJ/src/base/event.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/base/chain.js","D:/workspace/git/NEJ/src/base/platform/event.patch.js"]
+[INFO] 2014-09-11 19:51:47.487	-	parse D:/workspace/git/NEJ/src/base/chain.js
+[DBUG] 2014-09-11 19:51:47.488	-	dependency result: D:/workspace/git/NEJ/src/base/chain.js -> ["D:/workspace/git/NEJ/src/base/util.js"]
+[INFO] 2014-09-11 19:51:47.489	-	parse D:/workspace/git/NEJ/src/base/platform/event.patch.js
+[INFO] 2014-09-11 19:51:47.491	-	parse NEJ.patch for D:/workspace/git/NEJ/src/base/platform/event.patch.js
+[INFO] 2014-09-11 19:51:47.492	-	compare platform td|gk|wk|pt with expression TR>=6.0
+[INFO] 2014-09-11 19:51:47.493	-	TR>=6.0 -> _k_.engine=='trident'&&_k_.release>='6.0'
+[INFO] 2014-09-11 19:51:47.494	-	compare platform td|gk|wk|pt with expression TR==5.0
+[INFO] 2014-09-11 19:51:47.495	-	TR==5.0 -> _k_.engine=='trident'&&_k_.release=='5.0'
+[INFO] 2014-09-11 19:51:47.496	-	compare platform td|gk|wk|pt with expression TR<=4.0
+[INFO] 2014-09-11 19:51:47.497	-	TR<=4.0 -> _k_.engine=='trident'&&_k_.release<='4.0'
+[INFO] 2014-09-11 19:51:47.498	-	compare platform td|gk|wk|pt with expression GR
+[INFO] 2014-09-11 19:51:47.499	-	GR -> _k_.engine=='gecko'
+[DBUG] 2014-09-11 19:51:47.499	-	dependency result: D:/workspace/git/NEJ/src/base/platform/event.patch.js -> ["D:/workspace/git/NEJ/src/base/platform/event.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/base/platform.js"]
+[INFO] 2014-09-11 19:51:47.501	-	parse D:/workspace/git/NEJ/src/base/platform/event.js
+[DBUG] 2014-09-11 19:51:47.502	-	dependency result: D:/workspace/git/NEJ/src/base/platform/event.js -> ["D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/base/platform.js"]
+[INFO] 2014-09-11 19:51:47.504	-	parse D:/workspace/git/NEJ/src/base/platform/element.patch.js
+[INFO] 2014-09-11 19:51:47.506	-	parse NEJ.patch for D:/workspace/git/NEJ/src/base/platform/element.patch.js
+[INFO] 2014-09-11 19:51:47.507	-	compare platform td|gk|wk|pt with expression TR
+[INFO] 2014-09-11 19:51:47.508	-	TR -> _k_.engine=='trident'
+[INFO] 2014-09-11 19:51:47.509	-	compare platform td|gk|wk|pt with expression TR<=6.0
+[INFO] 2014-09-11 19:51:47.510	-	TR<=6.0 -> _k_.engine=='trident'&&_k_.release<='6.0'
+[INFO] 2014-09-11 19:51:47.511	-	compare platform td|gk|wk|pt with expression TR<=5.0
+[INFO] 2014-09-11 19:51:47.512	-	TR<=5.0 -> _k_.engine=='trident'&&_k_.release<='5.0'
+[INFO] 2014-09-11 19:51:47.512	-	compare platform td|gk|wk|pt with expression TR<=4.0
+[INFO] 2014-09-11 19:51:47.513	-	TR<=4.0 -> _k_.engine=='trident'&&_k_.release<='4.0'
+[INFO] 2014-09-11 19:51:47.514	-	compare platform td|gk|wk|pt with expression TR<=3.0
+[INFO] 2014-09-11 19:51:47.515	-	TR<=3.0 -> _k_.engine=='trident'&&_k_.release<='3.0'
+[INFO] 2014-09-11 19:51:47.516	-	compare platform td|gk|wk|pt with expression TR<=2.0
+[INFO] 2014-09-11 19:51:47.517	-	TR<=2.0 -> _k_.engine=='trident'&&_k_.release<='2.0'
+[INFO] 2014-09-11 19:51:47.517	-	compare platform td|gk|wk|pt with expression GR
+[INFO] 2014-09-11 19:51:47.518	-	GR -> _k_.engine=='gecko'
+[DBUG] 2014-09-11 19:51:47.519	-	dependency result: D:/workspace/git/NEJ/src/base/platform/element.patch.js -> ["D:/workspace/git/NEJ/src/base/platform/element.js","D:/workspace/git/NEJ/src/base/platform.js","D:/workspace/git/NEJ/src/base/util.js"]
+[INFO] 2014-09-11 19:51:47.520	-	parse D:/workspace/git/NEJ/src/base/platform/element.js
+[DBUG] 2014-09-11 19:51:47.522	-	dependency result: D:/workspace/git/NEJ/src/base/platform/element.js -> ["D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/base/platform.js"]
+[INFO] 2014-09-11 19:51:47.523	-	parse D:/workspace/git/NEJ/src/util/history/history.js
+[DBUG] 2014-09-11 19:51:47.525	-	dependency result: D:/workspace/git/NEJ/src/util/history/history.js -> ["D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/base/event.js","D:/workspace/git/NEJ/src/base/platform.js","D:/workspace/git/NEJ/src/util/event/event.js","D:/workspace/git/NEJ/src/util/timer/animation.js","D:/workspace/git/NEJ/src/util/history/platform/history.patch.js"]
+[INFO] 2014-09-11 19:51:47.527	-	parse D:/workspace/git/NEJ/src/util/event/event.js
+[DBUG] 2014-09-11 19:51:47.529	-	dependency result: D:/workspace/git/NEJ/src/util/event/event.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/base/event.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/util/event.js"]
+[INFO] 2014-09-11 19:51:47.532	-	parse D:/workspace/git/NEJ/src/util/event.js
+[DBUG] 2014-09-11 19:51:47.534	-	dependency result: D:/workspace/git/NEJ/src/util/event.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/event.js","D:/workspace/git/NEJ/src/base/util.js"]
+[INFO] 2014-09-11 19:51:47.535	-	parse D:/workspace/git/NEJ/src/util/timer/animation.js
+[DBUG] 2014-09-11 19:51:47.536	-	dependency result: D:/workspace/git/NEJ/src/util/timer/animation.js -> ["D:/workspace/git/NEJ/src/base/platform.js","D:/workspace/git/NEJ/src/util/timer/platform/animation.patch.js"]
+[INFO] 2014-09-11 19:51:47.538	-	parse D:/workspace/git/NEJ/src/util/timer/platform/animation.patch.js
+[INFO] 2014-09-11 19:51:47.538	-	parse NEJ.patch for D:/workspace/git/NEJ/src/util/timer/platform/animation.patch.js
+[INFO] 2014-09-11 19:51:47.540	-	compare platform td|gk|wk|pt with expression TR<=5.0
+[INFO] 2014-09-11 19:51:47.541	-	TR<=5.0 -> _k_.engine=='trident'&&_k_.release<='5.0'
+[DBUG] 2014-09-11 19:51:47.542	-	dependency result: D:/workspace/git/NEJ/src/util/timer/platform/animation.patch.js -> ["D:/workspace/git/NEJ/src/util/timer/platform/animation.js","D:/workspace/git/NEJ/src/base/platform.js"]
+[INFO] 2014-09-11 19:51:47.543	-	parse D:/workspace/git/NEJ/src/util/timer/platform/animation.js
+[DBUG] 2014-09-11 19:51:47.544	-	dependency result: D:/workspace/git/NEJ/src/util/timer/platform/animation.js -> ["D:/workspace/git/NEJ/src/base/platform.js"]
+[INFO] 2014-09-11 19:51:47.545	-	parse D:/workspace/git/NEJ/src/util/history/platform/history.patch.js
+[INFO] 2014-09-11 19:51:47.547	-	parse NEJ.patch for D:/workspace/git/NEJ/src/util/history/platform/history.patch.js
+[INFO] 2014-09-11 19:51:47.550	-	compare platform td|gk|wk|pt with expression TR<=4.0
+[INFO] 2014-09-11 19:51:47.551	-	TR<=4.0 -> _k_.engine=='trident'&&_k_.release<='4.0'
+[DBUG] 2014-09-11 19:51:47.552	-	dependency result: D:/workspace/git/NEJ/src/util/history/platform/history.patch.js -> ["D:/workspace/git/NEJ/src/util/history/platform/history.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/base/platform.js"]
+[INFO] 2014-09-11 19:51:47.553	-	parse D:/workspace/git/NEJ/src/util/history/platform/history.js
+[DBUG] 2014-09-11 19:51:47.555	-	dependency result: D:/workspace/git/NEJ/src/util/history/platform/history.js -> null
+[INFO] 2014-09-11 19:51:47.555	-	parse D:/workspace/git/NEJ/src/util/template/tpl.js
+[DBUG] 2014-09-11 19:51:47.558	-	dependency result: D:/workspace/git/NEJ/src/util/template/tpl.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/base/event.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/template/jst.js","D:/workspace/git/NEJ/src/util/event/event.js","D:/workspace/git/NEJ/src/util/ajax/tag.js","D:/workspace/git/NEJ/src/util/ajax/xdr.js","D:/workspace/git/NEJ/src/base/chain.js"]
+[INFO] 2014-09-11 19:51:47.561	-	parse D:/workspace/git/NEJ/src/util/template/jst.js
+[DBUG] 2014-09-11 19:51:47.562	-	dependency result: D:/workspace/git/NEJ/src/util/template/jst.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/base/chain.js","D:/workspace/git/NEJ/src/util/template/trimpath.js"]
+[INFO] 2014-09-11 19:51:47.564	-	parse D:/workspace/git/NEJ/src/util/template/trimpath.js
+[DBUG] 2014-09-11 19:51:47.565	-	dependency result: D:/workspace/git/NEJ/src/util/template/trimpath.js -> undefined
+[INFO] 2014-09-11 19:51:47.566	-	parse D:/workspace/git/NEJ/src/util/ajax/tag.js
+[DBUG] 2014-09-11 19:51:47.568	-	dependency result: D:/workspace/git/NEJ/src/util/ajax/tag.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/util/ajax/loader/text.js","D:/workspace/git/NEJ/src/util/ajax/loader/html.js","D:/workspace/git/NEJ/src/util/ajax/loader/style.js","D:/workspace/git/NEJ/src/util/ajax/loader/script.js"]
+[INFO] 2014-09-11 19:51:47.570	-	parse D:/workspace/git/NEJ/src/util/ajax/loader/text.js
+[DBUG] 2014-09-11 19:51:47.571	-	dependency result: D:/workspace/git/NEJ/src/util/ajax/loader/text.js -> ["D:/workspace/git/NEJ/src/util/ajax/loader/loader.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/ajax/xdr.js"]
+[INFO] 2014-09-11 19:51:47.573	-	parse D:/workspace/git/NEJ/src/util/ajax/loader/loader.js
+[DBUG] 2014-09-11 19:51:47.576	-	dependency result: D:/workspace/git/NEJ/src/util/ajax/loader/loader.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/constant.js","D:/workspace/git/NEJ/src/base/event.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/util/event.js"]
+[INFO] 2014-09-11 19:51:47.577	-	parse D:/workspace/git/NEJ/src/util/ajax/xdr.js
+[DBUG] 2014-09-11 19:51:47.579	-	dependency result: D:/workspace/git/NEJ/src/util/ajax/xdr.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/constant.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/ajax/proxy/xhr.js","D:/workspace/git/NEJ/src/util/ajax/platform/xdr.patch.js"]
+[INFO] 2014-09-11 19:51:47.581	-	parse D:/workspace/git/NEJ/src/util/ajax/proxy/xhr.js
+[DBUG] 2014-09-11 19:51:47.582	-	dependency result: D:/workspace/git/NEJ/src/util/ajax/proxy/xhr.js -> ["D:/workspace/git/NEJ/src/util/ajax/proxy/proxy.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/constant.js","D:/workspace/git/NEJ/src/util/ajax/proxy/platform/xhr.patch.js"]
+[INFO] 2014-09-11 19:51:47.584	-	parse D:/workspace/git/NEJ/src/util/ajax/proxy/proxy.js
+[DBUG] 2014-09-11 19:51:47.585	-	dependency result: D:/workspace/git/NEJ/src/util/ajax/proxy/proxy.js -> ["D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/base/config.js","D:/workspace/git/NEJ/src/base/constant.js","D:/workspace/git/NEJ/src/util/event.js","D:/workspace/git/NEJ/src/util/cache/cookie.js","D:/workspace/git/NEJ/src/util/encode/json.js"]
+[INFO] 2014-09-11 19:51:47.587	-	parse D:/workspace/git/NEJ/src/util/cache/cookie.js
+[DBUG] 2014-09-11 19:51:47.588	-	dependency result: D:/workspace/git/NEJ/src/util/cache/cookie.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/util.js"]
+[INFO] 2014-09-11 19:51:47.589	-	parse D:/workspace/git/NEJ/src/util/encode/json.js
+[DBUG] 2014-09-11 19:51:47.590	-	dependency result: D:/workspace/git/NEJ/src/util/encode/json.js -> ["D:/workspace/git/NEJ/src/util/encode/platform/json.patch.js"]
+[INFO] 2014-09-11 19:51:47.592	-	parse D:/workspace/git/NEJ/src/util/encode/platform/json.patch.js
+[INFO] 2014-09-11 19:51:47.593	-	parse NEJ.patch for D:/workspace/git/NEJ/src/util/encode/platform/json.patch.js
+[INFO] 2014-09-11 19:51:47.594	-	compare platform td|gk|wk|pt with expression TR<=5.0
+[INFO] 2014-09-11 19:51:47.595	-	fetch dependences from NEJ.patch -> ["D:/workspace/git/NEJ/src/util/encode/platform/3rd.json.js"]
+[INFO] 2014-09-11 19:51:47.596	-	compare platform td|gk|wk|pt with expression TR==2.0
+[INFO] 2014-09-11 19:51:47.597	-	TR==2.0 -> _k_.engine=='trident'&&_k_.release=='2.0'
+[DBUG] 2014-09-11 19:51:47.598	-	dependency result: D:/workspace/git/NEJ/src/util/encode/platform/json.patch.js -> ["D:/workspace/git/NEJ/src/base/platform.js","D:/workspace/git/NEJ/src/util/encode/platform/3rd.json.js"]
+[INFO] 2014-09-11 19:51:47.599	-	parse D:/workspace/git/NEJ/src/util/encode/platform/3rd.json.js
+[DBUG] 2014-09-11 19:51:47.600	-	dependency result: D:/workspace/git/NEJ/src/util/encode/platform/3rd.json.js -> undefined
+[INFO] 2014-09-11 19:51:47.601	-	parse D:/workspace/git/NEJ/src/util/ajax/proxy/platform/xhr.patch.js
+[INFO] 2014-09-11 19:51:47.602	-	parse NEJ.patch for D:/workspace/git/NEJ/src/util/ajax/proxy/platform/xhr.patch.js
+[INFO] 2014-09-11 19:51:47.603	-	compare platform td|gk|wk|pt with expression TR<=2.0
+[INFO] 2014-09-11 19:51:47.604	-	TR<=2.0 -> _k_.engine=='trident'&&_k_.release<='2.0'
+[DBUG] 2014-09-11 19:51:47.605	-	dependency result: D:/workspace/git/NEJ/src/util/ajax/proxy/platform/xhr.patch.js -> ["D:/workspace/git/NEJ/src/util/ajax/proxy/platform/xhr.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/base/platform.js"]
+[INFO] 2014-09-11 19:51:47.607	-	parse D:/workspace/git/NEJ/src/util/ajax/proxy/platform/xhr.js
+[DBUG] 2014-09-11 19:51:47.609	-	dependency result: D:/workspace/git/NEJ/src/util/ajax/proxy/platform/xhr.js -> null
+[INFO] 2014-09-11 19:51:47.610	-	parse D:/workspace/git/NEJ/src/util/ajax/platform/xdr.patch.js
+[INFO] 2014-09-11 19:51:47.611	-	parse NEJ.patch for D:/workspace/git/NEJ/src/util/ajax/platform/xdr.patch.js
+[INFO] 2014-09-11 19:51:47.612	-	compare platform td|gk|wk|pt with expression TR<=5.0
+[INFO] 2014-09-11 19:51:47.612	-	TR<=5.0 -> _k_.engine=='trident'&&_k_.release<='5.0'
+[DBUG] 2014-09-11 19:51:47.613	-	dependency result: D:/workspace/git/NEJ/src/util/ajax/platform/xdr.patch.js -> ["D:/workspace/git/NEJ/src/util/ajax/platform/xdr.js","D:/workspace/git/NEJ/src/base/platform.js"]
+[INFO] 2014-09-11 19:51:47.615	-	parse D:/workspace/git/NEJ/src/util/ajax/platform/xdr.js
+[DBUG] 2014-09-11 19:51:47.616	-	dependency result: D:/workspace/git/NEJ/src/util/ajax/platform/xdr.js -> ["D:/workspace/git/NEJ/src/util/ajax/proxy/xhr.js","D:/workspace/git/NEJ/src/util/ajax/proxy/flash.js","D:/workspace/git/NEJ/src/util/ajax/proxy/frame.js","D:/workspace/git/NEJ/src/util/ajax/proxy/upload.js"]
+[INFO] 2014-09-11 19:51:47.618	-	parse D:/workspace/git/NEJ/src/util/ajax/proxy/flash.js
+[DBUG] 2014-09-11 19:51:47.619	-	dependency result: D:/workspace/git/NEJ/src/util/ajax/proxy/flash.js -> ["D:/workspace/git/NEJ/src/util/ajax/proxy/proxy.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/config.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/util/flash/flash.js"]
+[INFO] 2014-09-11 19:51:47.621	-	parse D:/workspace/git/NEJ/src/util/flash/flash.js
+[DBUG] 2014-09-11 19:51:47.622	-	dependency result: D:/workspace/git/NEJ/src/util/flash/flash.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/base/event.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/util/template/jst.js","D:/workspace/git/NEJ/src/util/timer/animation.js","D:/workspace/git/NEJ/src/util/flash/platform/flash.patch.js","D:/workspace/git/NEJ/src/util/flash/flash.html"]
+[INFO] 2014-09-11 19:51:47.624	-	parse D:/workspace/git/NEJ/src/util/flash/platform/flash.patch.js
+[INFO] 2014-09-11 19:51:47.625	-	parse NEJ.patch for D:/workspace/git/NEJ/src/util/flash/platform/flash.patch.js
+[INFO] 2014-09-11 19:51:47.626	-	compare platform td|gk|wk|pt with expression TR
+[INFO] 2014-09-11 19:51:47.627	-	TR -> _k_.engine=='trident'
+[INFO] 2014-09-11 19:51:47.628	-	compare platform td|gk|wk|pt with expression WV
+[INFO] 2014-09-11 19:51:47.628	-	WV -> _k_.engine=='webkit'
+[DBUG] 2014-09-11 19:51:47.629	-	dependency result: D:/workspace/git/NEJ/src/util/flash/platform/flash.patch.js -> ["D:/workspace/git/NEJ/src/util/flash/platform/flash.js","D:/workspace/git/NEJ/src/base/platform.js"]
+[INFO] 2014-09-11 19:51:47.630	-	parse D:/workspace/git/NEJ/src/util/flash/platform/flash.js
+[DBUG] 2014-09-11 19:51:47.631	-	dependency result: D:/workspace/git/NEJ/src/util/flash/platform/flash.js -> ["D:/workspace/git/NEJ/src/base/platform.js"]
+[INFO] 2014-09-11 19:51:47.632	-	parse D:/workspace/git/NEJ/src/util/flash/flash.html
+[DBUG] 2014-09-11 19:51:47.633	-	dependency result: D:/workspace/git/NEJ/src/util/flash/flash.html -> undefined
+[INFO] 2014-09-11 19:51:47.634	-	parse D:/workspace/git/NEJ/src/util/ajax/proxy/frame.js
+[DBUG] 2014-09-11 19:51:47.636	-	dependency result: D:/workspace/git/NEJ/src/util/ajax/proxy/frame.js -> ["D:/workspace/git/NEJ/src/util/ajax/proxy/proxy.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/event.js","D:/workspace/git/NEJ/src/base/config.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/ajax/message.js"]
+[INFO] 2014-09-11 19:51:47.638	-	parse D:/workspace/git/NEJ/src/util/ajax/message.js
+[DBUG] 2014-09-11 19:51:47.640	-	dependency result: D:/workspace/git/NEJ/src/util/ajax/message.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/ajax/platform/message.patch.js"]
+[INFO] 2014-09-11 19:51:47.641	-	parse D:/workspace/git/NEJ/src/util/ajax/platform/message.patch.js
+[INFO] 2014-09-11 19:51:47.643	-	parse NEJ.patch for D:/workspace/git/NEJ/src/util/ajax/platform/message.patch.js
+[INFO] 2014-09-11 19:51:47.644	-	compare platform td|gk|wk|pt with expression 4.0<=TR<=5.0
+[INFO] 2014-09-11 19:51:47.645	-	4.0<=TR<=5.0 -> _k_.engine=='trident'&&'4.0'<=_k_.release&&_k_.release<='5.0'
+[INFO] 2014-09-11 19:51:47.646	-	compare platform td|gk|wk|pt with expression TR<=3.0
+[INFO] 2014-09-11 19:51:47.646	-	fetch dependences from NEJ.patch -> ["D:/workspace/git/NEJ/src/util/event/event.js","D:/workspace/git/NEJ/src/util/encode/json.js"]
+[INFO] 2014-09-11 19:51:47.648	-	TR<=3.0 -> _k_.engine=='trident'&&_k_.release<='3.0'
+[DBUG] 2014-09-11 19:51:47.649	-	dependency result: D:/workspace/git/NEJ/src/util/ajax/platform/message.patch.js -> ["D:/workspace/git/NEJ/src/util/ajax/platform/message.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/base/event.js","D:/workspace/git/NEJ/src/base/platform.js","D:/workspace/git/NEJ/src/util/event/event.js","D:/workspace/git/NEJ/src/util/encode/json.js"]
+[INFO] 2014-09-11 19:51:47.651	-	parse D:/workspace/git/NEJ/src/util/ajax/platform/message.js
+[DBUG] 2014-09-11 19:51:47.652	-	dependency result: D:/workspace/git/NEJ/src/util/ajax/platform/message.js -> null
+[INFO] 2014-09-11 19:51:47.653	-	parse D:/workspace/git/NEJ/src/util/ajax/proxy/upload.js
+[DBUG] 2014-09-11 19:51:47.655	-	dependency result: D:/workspace/git/NEJ/src/util/ajax/proxy/upload.js -> ["D:/workspace/git/NEJ/src/util/ajax/proxy/proxy.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/base/event.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/base/constant.js","D:/workspace/git/NEJ/src/util/ajax/xdr.js","D:/workspace/git/NEJ/src/util/ajax/message.js"]
+[INFO] 2014-09-11 19:51:47.657	-	parse D:/workspace/git/NEJ/src/util/ajax/loader/html.js
+[DBUG] 2014-09-11 19:51:47.658	-	dependency result: D:/workspace/git/NEJ/src/util/ajax/loader/html.js -> ["D:/workspace/git/NEJ/src/util/ajax/loader/loader.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/ajax/loader/platform/html.patch.js"]
+[INFO] 2014-09-11 19:51:47.660	-	parse D:/workspace/git/NEJ/src/util/ajax/loader/platform/html.patch.js
+[INFO] 2014-09-11 19:51:47.661	-	parse NEJ.patch for D:/workspace/git/NEJ/src/util/ajax/loader/platform/html.patch.js
+[INFO] 2014-09-11 19:51:47.662	-	compare platform td|gk|wk|pt with expression TR<=2.0
+[INFO] 2014-09-11 19:51:47.663	-	TR<=2.0 -> _k_.engine=='trident'&&_k_.release<='2.0'
+[DBUG] 2014-09-11 19:51:47.664	-	dependency result: D:/workspace/git/NEJ/src/util/ajax/loader/platform/html.patch.js -> ["D:/workspace/git/NEJ/src/util/ajax/loader/platform/html.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/base/platform.js"]
+[INFO] 2014-09-11 19:51:47.666	-	parse D:/workspace/git/NEJ/src/util/ajax/loader/platform/html.js
+[DBUG] 2014-09-11 19:51:47.667	-	dependency result: D:/workspace/git/NEJ/src/util/ajax/loader/platform/html.js -> ["D:/workspace/git/NEJ/src/base/element.js"]
+[INFO] 2014-09-11 19:51:47.668	-	parse D:/workspace/git/NEJ/src/util/ajax/loader/style.js
+[DBUG] 2014-09-11 19:51:47.669	-	dependency result: D:/workspace/git/NEJ/src/util/ajax/loader/style.js -> ["D:/workspace/git/NEJ/src/util/ajax/loader/loader.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js"]
+[INFO] 2014-09-11 19:51:47.671	-	parse D:/workspace/git/NEJ/src/util/ajax/loader/script.js
+[DBUG] 2014-09-11 19:51:47.672	-	dependency result: D:/workspace/git/NEJ/src/util/ajax/loader/script.js -> ["D:/workspace/git/NEJ/src/util/ajax/loader/loader.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js"]
+[INFO] 2014-09-11 19:51:47.674	-	parse D:/workspace/git/NEJ/src/util/dispatcher/dsp/util.js
+[DBUG] 2014-09-11 19:51:47.675	-	dependency result: D:/workspace/git/NEJ/src/util/dispatcher/dsp/util.js -> ["D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/util/dispatcher/dsp/node.js","D:/workspace/git/NEJ/src/util/dispatcher/module.js"]
+[INFO] 2014-09-11 19:51:47.677	-	parse D:/workspace/git/NEJ/src/util/dispatcher/dsp/node.js
+[DBUG] 2014-09-11 19:51:47.678	-	dependency result: D:/workspace/git/NEJ/src/util/dispatcher/dsp/node.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/util/event.js"]
+[INFO] 2014-09-11 19:51:47.680	-	parse D:/workspace/git/NEJ/src/util/dispatcher/module.js
+[DBUG] 2014-09-11 19:51:47.683	-	dependency result: D:/workspace/git/NEJ/src/util/dispatcher/module.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/util/event.js","D:/workspace/git/NEJ/src/util/dispatcher/dispatcher.js"]
+[INFO] 2014-09-11 19:51:47.685	-	parse D:/workspace/git/NEJ/src/util/dispatcher/dsp/group.js
+[DBUG] 2014-09-11 19:51:47.686	-	dependency result: D:/workspace/git/NEJ/src/util/dispatcher/dsp/group.js -> ["D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/constant.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/ajax/tag.js","D:/workspace/git/NEJ/src/util/event.js","D:/workspace/git/NEJ/src/util/template/tpl.js","D:/workspace/git/NEJ/src/util/dispatcher/dsp/util.js"]
+[INFO] 2014-09-11 19:51:47.689	-	parse D:/workspace/git/NEJ/src/util/dispatcher/dsp/single.js
+[DBUG] 2014-09-11 19:51:47.690	-	dependency result: D:/workspace/git/NEJ/src/util/dispatcher/dsp/single.js -> ["D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/dispatcher/dsp/util.js","D:/workspace/git/NEJ/src/util/dispatcher/dsp/group.js"]
+[INFO] 2014-09-11 19:51:47.692	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/blog/list/index.js
+[DBUG] 2014-09-11 19:51:47.693	-	dependency result: D:/workspace/git/nej-demo/webapp/src/html/module/blog/list/index.js -> ["D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/dispatcher/module.js","D:/workspace/git/NEJ/src/util/list/page.js","D:/workspace/git/NEJ/src/util/template/tpl.js","D:/workspace/git/nej-demo/webapp/src/javascript/module/module.js","D:/workspace/git/nej-demo/webapp/src/javascript/cache/blog.js"]
+[INFO] 2014-09-11 19:51:47.696	-	parse D:/workspace/git/NEJ/src/util/list/page.js
+[DBUG] 2014-09-11 19:51:47.697	-	dependency result: D:/workspace/git/NEJ/src/util/list/page.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/util/list/module.js"]
+[INFO] 2014-09-11 19:51:47.698	-	parse D:/workspace/git/NEJ/src/util/list/module.js
+[DBUG] 2014-09-11 19:51:47.701	-	dependency result: D:/workspace/git/NEJ/src/util/list/module.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/base/event.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/ui/item/list.js","D:/workspace/git/NEJ/src/ui/pager/pager.js","D:/workspace/git/NEJ/src/util/event.js","D:/workspace/git/NEJ/src/util/template/jst.js","D:/workspace/git/NEJ/src/util/template/tpl.js","D:/workspace/git/NEJ/src/util/cache/list.js"]
+[INFO] 2014-09-11 19:51:47.703	-	parse D:/workspace/git/NEJ/src/ui/item/list.js
+[DBUG] 2014-09-11 19:51:47.704	-	dependency result: D:/workspace/git/NEJ/src/ui/item/list.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/ui/item/item.js"]
+[INFO] 2014-09-11 19:51:47.706	-	parse D:/workspace/git/NEJ/src/ui/item/item.js
+[DBUG] 2014-09-11 19:51:47.707	-	dependency result: D:/workspace/git/NEJ/src/ui/item/item.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/ui/base.js"]
+[INFO] 2014-09-11 19:51:47.708	-	parse D:/workspace/git/NEJ/src/ui/base.js
+[DBUG] 2014-09-11 19:51:47.710	-	dependency result: D:/workspace/git/NEJ/src/ui/base.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/util/event.js","D:/workspace/git/NEJ/src/util/template/tpl.js"]
+[INFO] 2014-09-11 19:51:47.712	-	parse D:/workspace/git/NEJ/src/ui/pager/pager.js
+[DBUG] 2014-09-11 19:51:47.713	-	dependency result: D:/workspace/git/NEJ/src/ui/pager/pager.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/ui/pager/pager.base.js","D:/workspace/git/NEJ/src/util/page/page.js"]
+[INFO] 2014-09-11 19:51:47.714	-	parse D:/workspace/git/NEJ/src/ui/pager/pager.base.js
+[DBUG] 2014-09-11 19:51:47.715	-	dependency result: D:/workspace/git/NEJ/src/ui/pager/pager.base.js -> ["D:/workspace/git/NEJ/src/ui/pager/base.js"]
+[INFO] 2014-09-11 19:51:47.716	-	parse D:/workspace/git/NEJ/src/ui/pager/base.js
+[DBUG] 2014-09-11 19:51:47.718	-	dependency result: D:/workspace/git/NEJ/src/ui/pager/base.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/ui/base.js","D:/workspace/git/NEJ/src/util/template/jst.js","D:/workspace/git/NEJ/src/ui/pager/base.css","D:/workspace/git/NEJ/src/ui/pager/base.html"]
+[INFO] 2014-09-11 19:51:47.720	-	parse D:/workspace/git/NEJ/src/ui/pager/base.css
+[DBUG] 2014-09-11 19:51:47.721	-	dependency result: D:/workspace/git/NEJ/src/ui/pager/base.css -> undefined
+[INFO] 2014-09-11 19:51:47.722	-	parse D:/workspace/git/NEJ/src/ui/pager/base.html
+[DBUG] 2014-09-11 19:51:47.723	-	dependency result: D:/workspace/git/NEJ/src/ui/pager/base.html -> undefined
+[INFO] 2014-09-11 19:51:47.724	-	parse D:/workspace/git/NEJ/src/util/page/page.js
+[DBUG] 2014-09-11 19:51:47.725	-	dependency result: D:/workspace/git/NEJ/src/util/page/page.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/util/page/base.js"]
+[INFO] 2014-09-11 19:51:47.727	-	parse D:/workspace/git/NEJ/src/util/page/base.js
+[DBUG] 2014-09-11 19:51:47.728	-	dependency result: D:/workspace/git/NEJ/src/util/page/base.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/base/event.js","D:/workspace/git/NEJ/src/util/event.js"]
+[INFO] 2014-09-11 19:51:47.730	-	parse D:/workspace/git/NEJ/src/util/cache/list.js
+[DBUG] 2014-09-11 19:51:47.732	-	dependency result: D:/workspace/git/NEJ/src/util/cache/list.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/util/cache/cache.js"]
+[INFO] 2014-09-11 19:51:47.734	-	parse D:/workspace/git/NEJ/src/util/cache/cache.js
+[DBUG] 2014-09-11 19:51:47.735	-	dependency result: D:/workspace/git/NEJ/src/util/cache/cache.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/util/event.js","D:/workspace/git/NEJ/src/util/cache/storage.js"]
+[INFO] 2014-09-11 19:51:47.737	-	parse D:/workspace/git/NEJ/src/util/cache/storage.js
+[DBUG] 2014-09-11 19:51:47.739	-	dependency result: D:/workspace/git/NEJ/src/util/cache/storage.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/base/event.js","D:/workspace/git/NEJ/src/util/event/event.js","D:/workspace/git/NEJ/src/util/cache/platform/storage.patch.js"]
+[INFO] 2014-09-11 19:51:47.741	-	parse D:/workspace/git/NEJ/src/util/cache/platform/storage.patch.js
+[INFO] 2014-09-11 19:51:47.742	-	parse NEJ.patch for D:/workspace/git/NEJ/src/util/cache/platform/storage.patch.js
+[INFO] 2014-09-11 19:51:47.743	-	compare platform td|gk|wk|pt with expression TR<=3.0
+[INFO] 2014-09-11 19:51:47.744	-	fetch dependences from NEJ.patch -> ["D:/workspace/git/NEJ/src/base/config.js","D:/workspace/git/NEJ/src/util/flash/flash.js"]
+[INFO] 2014-09-11 19:51:47.745	-	TR<=3.0 -> _k_.engine=='trident'&&_k_.release<='3.0'
+[DBUG] 2014-09-11 19:51:47.746	-	dependency result: D:/workspace/git/NEJ/src/util/cache/platform/storage.patch.js -> ["D:/workspace/git/NEJ/src/base/event.js","D:/workspace/git/NEJ/src/util/cache/platform/storage.js","D:/workspace/git/NEJ/src/base/platform.js","D:/workspace/git/NEJ/src/base/config.js","D:/workspace/git/NEJ/src/util/flash/flash.js"]
+[INFO] 2014-09-11 19:51:47.748	-	parse D:/workspace/git/NEJ/src/util/cache/platform/storage.js
+[DBUG] 2014-09-11 19:51:47.749	-	dependency result: D:/workspace/git/NEJ/src/util/cache/platform/storage.js -> null
+[INFO] 2014-09-11 19:51:47.750	-	parse D:/workspace/git/nej-demo/webapp/src/javascript/module/module.js
+[DBUG] 2014-09-11 19:51:47.751	-	dependency result: D:/workspace/git/nej-demo/webapp/src/javascript/module/module.js -> ["D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/util/dispatcher/module.js"]
+[INFO] 2014-09-11 19:51:47.753	-	parse D:/workspace/git/nej-demo/webapp/src/javascript/cache/blog.js
+[DBUG] 2014-09-11 19:51:47.754	-	dependency result: D:/workspace/git/nej-demo/webapp/src/javascript/cache/blog.js -> ["D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/util/ajax/xdr.js","D:/workspace/git/nej-demo/webapp/src/javascript/cache/cache.js"]
+[INFO] 2014-09-11 19:51:47.756	-	parse D:/workspace/git/nej-demo/webapp/src/javascript/cache/cache.js
+[DBUG] 2014-09-11 19:51:47.757	-	dependency result: D:/workspace/git/nej-demo/webapp/src/javascript/cache/cache.js -> ["D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/util/cache/abstract.js"]
+[INFO] 2014-09-11 19:51:47.758	-	parse D:/workspace/git/NEJ/src/util/cache/abstract.js
+[DBUG] 2014-09-11 19:51:47.760	-	dependency result: D:/workspace/git/NEJ/src/util/cache/abstract.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/util/cache/list.js"]
+[INFO] 2014-09-11 19:51:47.761	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.box/index.js
+[DBUG] 2014-09-11 19:51:47.763	-	dependency result: D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.box/index.js -> ["D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/tab/view.js","D:/workspace/git/NEJ/src/util/template/tpl.js","D:/workspace/git/NEJ/src/util/dispatcher/module.js","D:/workspace/git/nej-demo/webapp/src/javascript/module/module.js"]
+[INFO] 2014-09-11 19:51:47.765	-	parse D:/workspace/git/NEJ/src/util/tab/view.js
+[DBUG] 2014-09-11 19:51:47.766	-	dependency result: D:/workspace/git/NEJ/src/util/tab/view.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/util/event.js"]
+[INFO] 2014-09-11 19:51:47.767	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.tag/index.js
+[DBUG] 2014-09-11 19:51:47.768	-	dependency result: D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.tag/index.js -> ["D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/tab/view.js","D:/workspace/git/NEJ/src/util/template/tpl.js","D:/workspace/git/NEJ/src/util/template/jst.js","D:/workspace/git/NEJ/src/util/dispatcher/module.js","D:/workspace/git/nej-demo/webapp/src/javascript/module/module.js","D:/workspace/git/nej-demo/webapp/src/javascript/cache/blog.js"]
+[INFO] 2014-09-11 19:51:47.771	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/blog/tab/index.js
+[DBUG] 2014-09-11 19:51:47.774	-	dependency result: D:/workspace/git/nej-demo/webapp/src/html/module/blog/tab/index.js -> ["D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/tab/view.js","D:/workspace/git/NEJ/src/util/template/tpl.js","D:/workspace/git/NEJ/src/util/dispatcher/module.js","D:/workspace/git/nej-demo/webapp/src/javascript/module/module.js"]
+[INFO] 2014-09-11 19:51:47.776	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/blog/tag/index.js
+[DBUG] 2014-09-11 19:51:47.777	-	dependency result: D:/workspace/git/nej-demo/webapp/src/html/module/blog/tag/index.js -> ["D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/template/tpl.js","D:/workspace/git/NEJ/src/util/dispatcher/module.js","D:/workspace/git/NEJ/src/util/list/waterfall.js","D:/workspace/git/nej-demo/webapp/src/javascript/module/module.js","D:/workspace/git/nej-demo/webapp/src/javascript/cache/tag.js"]
+[INFO] 2014-09-11 19:51:47.779	-	parse D:/workspace/git/NEJ/src/util/list/waterfall.js
+[DBUG] 2014-09-11 19:51:47.781	-	dependency result: D:/workspace/git/NEJ/src/util/list/waterfall.js -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/event.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/util/list/module.js"]
+[INFO] 2014-09-11 19:51:47.783	-	parse D:/workspace/git/nej-demo/webapp/src/javascript/cache/tag.js
+[DBUG] 2014-09-11 19:51:47.784	-	dependency result: D:/workspace/git/nej-demo/webapp/src/javascript/cache/tag.js -> ["D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/util/ajax/xdr.js","D:/workspace/git/nej-demo/webapp/src/javascript/cache/cache.js"]
+[INFO] 2014-09-11 19:51:47.786	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog/index.js
+[DBUG] 2014-09-11 19:51:47.787	-	dependency result: D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog/index.js -> ["D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/template/tpl.js","D:/workspace/git/NEJ/src/util/dispatcher/module.js","D:/workspace/git/nej-demo/webapp/src/javascript/module/module.js"]
+[INFO] 2014-09-11 19:51:47.789	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog.list/index.js
+[DBUG] 2014-09-11 19:51:47.790	-	dependency result: D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog.list/index.js -> ["D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/template/tpl.js","D:/workspace/git/NEJ/src/util/dispatcher/module.js","D:/workspace/git/nej-demo/webapp/src/javascript/module/module.js"]
+[INFO] 2014-09-11 19:51:47.792	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting/index.js
+[DBUG] 2014-09-11 19:51:47.793	-	dependency result: D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting/index.js -> ["D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/template/tpl.js","D:/workspace/git/NEJ/src/util/dispatcher/module.js","D:/workspace/git/nej-demo/webapp/src/javascript/module/module.js"]
+[INFO] 2014-09-11 19:51:47.795	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting.account/index.js
+[DBUG] 2014-09-11 19:51:47.796	-	dependency result: D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting.account/index.js -> ["D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/template/tpl.js","D:/workspace/git/NEJ/src/util/dispatcher/module.js","D:/workspace/git/nej-demo/webapp/src/javascript/module/module.js"]
+[INFO] 2014-09-11 19:51:47.798	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/layout/system/index.js
+[DBUG] 2014-09-11 19:51:47.799	-	dependency result: D:/workspace/git/nej-demo/webapp/src/html/module/layout/system/index.js -> ["D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/template/tpl.js","D:/workspace/git/NEJ/src/util/dispatcher/module.js","D:/workspace/git/nej-demo/webapp/src/javascript/module/module.js"]
+[INFO] 2014-09-11 19:51:47.801	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/setting/account.tab/index.js
+[DBUG] 2014-09-11 19:51:47.802	-	dependency result: D:/workspace/git/nej-demo/webapp/src/html/module/setting/account.tab/index.js -> ["D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/tab/view.js","D:/workspace/git/NEJ/src/util/template/tpl.js","D:/workspace/git/NEJ/src/util/dispatcher/module.js","D:/workspace/git/nej-demo/webapp/src/javascript/module/module.js"]
+[INFO] 2014-09-11 19:51:47.804	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/setting/edu/index.js
+[DBUG] 2014-09-11 19:51:47.805	-	dependency result: D:/workspace/git/nej-demo/webapp/src/html/module/setting/edu/index.js -> ["D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/template/tpl.js","D:/workspace/git/NEJ/src/util/dispatcher/module.js","D:/workspace/git/nej-demo/webapp/src/javascript/module/module.js"]
+[INFO] 2014-09-11 19:51:47.807	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/setting/permission/index.js
+[DBUG] 2014-09-11 19:51:47.809	-	dependency result: D:/workspace/git/nej-demo/webapp/src/html/module/setting/permission/index.js -> ["D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/base/event.js","D:/workspace/git/NEJ/src/util/template/tpl.js","D:/workspace/git/NEJ/src/util/dispatcher/module.js","D:/workspace/git/nej-demo/webapp/src/javascript/module/module.js"]
+[INFO] 2014-09-11 19:51:47.811	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/setting/profile/index.js
+[DBUG] 2014-09-11 19:51:47.812	-	dependency result: D:/workspace/git/nej-demo/webapp/src/html/module/setting/profile/index.js -> ["D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/base/event.js","D:/workspace/git/NEJ/src/util/template/tpl.js","D:/workspace/git/NEJ/src/util/dispatcher/module.js","D:/workspace/git/nej-demo/webapp/src/javascript/module/module.js"]
+[INFO] 2014-09-11 19:51:47.814	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/setting/tab/index.js
+[DBUG] 2014-09-11 19:51:47.815	-	dependency result: D:/workspace/git/nej-demo/webapp/src/html/module/setting/tab/index.js -> ["D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/tab/view.js","D:/workspace/git/NEJ/src/util/template/tpl.js","D:/workspace/git/NEJ/src/util/dispatcher/module.js","D:/workspace/git/nej-demo/webapp/src/javascript/module/module.js"]
+[INFO] 2014-09-11 19:51:47.817	-	parse D:/workspace/git/nej-demo/webapp/src/html/module/tab/index.js
+[DBUG] 2014-09-11 19:51:47.819	-	dependency result: D:/workspace/git/nej-demo/webapp/src/html/module/tab/index.js -> ["D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/tab/view.js","D:/workspace/git/NEJ/src/util/template/tpl.js","D:/workspace/git/NEJ/src/util/dispatcher/module.js","D:/workspace/git/nej-demo/webapp/src/javascript/module/module.js"]
+[INFO] 2014-09-11 19:51:47.826	-	mask map -> {}
+[INFO] 2014-09-11 19:51:47.827	-	core css file list -> []
+[INFO] 2014-09-11 19:51:47.827	-	pg_ for D:/workspace/git/nej-demo/webapp/src/html/app.html css file list -> ["D:/workspace/git/nej-demo/webapp/src/css/template.css","D:/workspace/git/nej-demo/webapp/src/css/app.css"]
+[INFO] 2014-09-11 19:51:47.828	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/blog/list/index.html css file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/blog/list/index.css"]
+[INFO] 2014-09-11 19:51:47.830	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.box/index.html css file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.box/index.css"]
+[INFO] 2014-09-11 19:51:47.831	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.tag/index.html css file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.tag/index.css"]
+[INFO] 2014-09-11 19:51:47.832	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/blog/tab/index.html css file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/blog/tab/index.css"]
+[INFO] 2014-09-11 19:51:47.833	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/blog/tag/index.html css file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/blog/tag/index.css"]
+[INFO] 2014-09-11 19:51:47.834	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog/index.html css file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog/index.css"]
+[INFO] 2014-09-11 19:51:47.835	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog.list/index.html css file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog.list/index.css"]
+[INFO] 2014-09-11 19:51:47.836	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting/index.html css file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting/index.css"]
+[INFO] 2014-09-11 19:51:47.837	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting.account/index.html css file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting.account/index.css"]
+[INFO] 2014-09-11 19:51:47.838	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/layout/system/index.html css file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/layout/system/index.css"]
+[INFO] 2014-09-11 19:51:47.839	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/setting/account.tab/index.html css file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/setting/account.tab/index.css"]
+[INFO] 2014-09-11 19:51:47.840	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/setting/edu/index.html css file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/setting/edu/index.css"]
+[INFO] 2014-09-11 19:51:47.841	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/setting/permission/index.html css file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/setting/permission/index.css"]
+[INFO] 2014-09-11 19:51:47.842	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/setting/profile/index.html css file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/setting/profile/index.css"]
+[INFO] 2014-09-11 19:51:47.843	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/setting/tab/index.html css file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/setting/tab/index.css"]
+[INFO] 2014-09-11 19:51:47.844	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/tab/index.html css file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/tab/index.css"]
+[INFO] 2014-09-11 19:51:47.847	-	mask map -> {}
+[INFO] 2014-09-11 19:51:47.847	-	core js file list -> ["D:/workspace/git/NEJ/src/base/global.js","D:/workspace/git/NEJ/src/base/platform/util.js","D:/workspace/git/NEJ/src/base/platform.js","D:/workspace/git/NEJ/src/base/platform/util.patch.js","D:/workspace/git/NEJ/src/base/klass.js","D:/workspace/git/NEJ/src/base/util.js","D:/workspace/git/NEJ/src/base/platform/config.js","D:/workspace/git/NEJ/src/base/platform/config.patch.js","D:/workspace/git/NEJ/src/base/config.js","D:/workspace/git/NEJ/src/base/constant.js","D:/workspace/git/NEJ/src/base/chain.js","D:/workspace/git/NEJ/src/base/platform/event.js","D:/workspace/git/NEJ/src/base/platform/event.patch.js","D:/workspace/git/NEJ/src/base/event.js","D:/workspace/git/NEJ/src/base/platform/element.js","D:/workspace/git/NEJ/src/base/platform/element.patch.js","D:/workspace/git/NEJ/src/base/element.js","D:/workspace/git/NEJ/src/util/event.js","D:/workspace/git/NEJ/src/util/event/event.js","D:/workspace/git/NEJ/src/util/timer/platform/animation.js","D:/workspace/git/NEJ/src/util/timer/platform/animation.patch.js","D:/workspace/git/NEJ/src/util/timer/animation.js","D:/workspace/git/NEJ/src/util/history/platform/history.js","D:/workspace/git/NEJ/src/util/history/platform/history.patch.js","D:/workspace/git/NEJ/src/util/history/history.js","D:/workspace/git/NEJ/src/util/template/trimpath.js","D:/workspace/git/NEJ/src/util/template/jst.js","D:/workspace/git/NEJ/src/util/ajax/loader/loader.js","D:/workspace/git/NEJ/src/util/cache/cookie.js","D:/workspace/git/NEJ/src/util/encode/platform/3rd.json.js","D:/workspace/git/NEJ/src/util/encode/platform/json.patch.js","D:/workspace/git/NEJ/src/util/encode/json.js","D:/workspace/git/NEJ/src/util/ajax/proxy/proxy.js","D:/workspace/git/NEJ/src/util/ajax/proxy/platform/xhr.js","D:/workspace/git/NEJ/src/util/ajax/proxy/platform/xhr.patch.js","D:/workspace/git/NEJ/src/util/ajax/proxy/xhr.js","D:/workspace/git/NEJ/src/util/flash/platform/flash.js","D:/workspace/git/NEJ/src/util/flash/platform/flash.patch.js","D:/workspace/git/NEJ/src/util/flash/flash.html","D:/workspace/git/NEJ/src/util/flash/flash.js","D:/workspace/git/NEJ/src/util/ajax/proxy/flash.js","D:/workspace/git/NEJ/src/util/ajax/platform/message.js","D:/workspace/git/NEJ/src/util/ajax/platform/message.patch.js","D:/workspace/git/NEJ/src/util/ajax/message.js","D:/workspace/git/NEJ/src/util/ajax/proxy/frame.js","D:/workspace/git/NEJ/src/util/ajax/proxy/upload.js","D:/workspace/git/NEJ/src/util/ajax/platform/xdr.js","D:/workspace/git/NEJ/src/util/ajax/platform/xdr.patch.js","D:/workspace/git/NEJ/src/util/ajax/xdr.js","D:/workspace/git/NEJ/src/util/ajax/loader/text.js","D:/workspace/git/NEJ/src/util/ajax/loader/platform/html.js","D:/workspace/git/NEJ/src/util/ajax/loader/platform/html.patch.js","D:/workspace/git/NEJ/src/util/ajax/loader/html.js","D:/workspace/git/NEJ/src/util/ajax/loader/style.js","D:/workspace/git/NEJ/src/util/ajax/loader/script.js","D:/workspace/git/NEJ/src/util/ajax/tag.js","D:/workspace/git/NEJ/src/util/template/tpl.js","D:/workspace/git/NEJ/src/util/dispatcher/dsp/node.js","D:/workspace/git/NEJ/src/util/dispatcher/dsp/util.js","D:/workspace/git/NEJ/src/util/dispatcher/dsp/group.js","D:/workspace/git/NEJ/src/util/dispatcher/dsp/single.js","D:/workspace/git/NEJ/src/util/dispatcher/dispatcher.js","D:/workspace/git/NEJ/src/util/dispatcher/module.js","D:/workspace/git/nej-demo/webapp/src/javascript/module/module.js","D:/workspace/git/NEJ/src/util/tab/view.js","D:/workspace/git/NEJ/src/util/cache/platform/storage.js","D:/workspace/git/NEJ/src/util/cache/platform/storage.patch.js","D:/workspace/git/NEJ/src/util/cache/storage.js","D:/workspace/git/NEJ/src/util/cache/cache.js","D:/workspace/git/NEJ/src/util/cache/list.js","D:/workspace/git/NEJ/src/util/cache/abstract.js","D:/workspace/git/nej-demo/webapp/src/javascript/cache/cache.js","D:/workspace/git/nej-demo/webapp/src/javascript/cache/blog.js","D:/workspace/git/NEJ/src/ui/base.js","D:/workspace/git/NEJ/src/ui/item/item.js","D:/workspace/git/NEJ/src/ui/item/list.js","D:/workspace/git/NEJ/src/ui/pager/base.css","D:/workspace/git/NEJ/src/ui/pager/base.html","D:/workspace/git/NEJ/src/ui/pager/base.js","D:/workspace/git/NEJ/src/ui/pager/pager.base.js","D:/workspace/git/NEJ/src/util/page/base.js","D:/workspace/git/NEJ/src/util/page/page.js","D:/workspace/git/NEJ/src/ui/pager/pager.js","D:/workspace/git/NEJ/src/util/list/module.js"]
+[INFO] 2014-09-11 19:51:47.863	-	pg_ for D:/workspace/git/nej-demo/webapp/src/html/app.html js file list -> ["js-code-1410436307422","js-code-1410436307423"]
+[INFO] 2014-09-11 19:51:47.864	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/blog/list/index.html js file list -> ["D:/workspace/git/NEJ/src/util/list/page.js","D:/workspace/git/nej-demo/webapp/src/html/module/blog/list/index.js"]
+[INFO] 2014-09-11 19:51:47.866	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.box/index.html js file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.box/index.js"]
+[INFO] 2014-09-11 19:51:47.867	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.tag/index.html js file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.tag/index.js"]
+[INFO] 2014-09-11 19:51:47.869	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/blog/tab/index.html js file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/blog/tab/index.js"]
+[INFO] 2014-09-11 19:51:47.870	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/blog/tag/index.html js file list -> ["D:/workspace/git/NEJ/src/util/list/waterfall.js","D:/workspace/git/nej-demo/webapp/src/javascript/cache/tag.js","D:/workspace/git/nej-demo/webapp/src/html/module/blog/tag/index.js"]
+[INFO] 2014-09-11 19:51:47.872	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog/index.html js file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog/index.js"]
+[INFO] 2014-09-11 19:51:47.873	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog.list/index.html js file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog.list/index.js"]
+[INFO] 2014-09-11 19:51:47.874	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting/index.html js file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting/index.js"]
+[INFO] 2014-09-11 19:51:47.875	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting.account/index.html js file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting.account/index.js"]
+[INFO] 2014-09-11 19:51:47.876	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/layout/system/index.html js file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/layout/system/index.js"]
+[INFO] 2014-09-11 19:51:47.877	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/setting/account.tab/index.html js file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/setting/account.tab/index.js"]
+[INFO] 2014-09-11 19:51:47.878	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/setting/edu/index.html js file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/setting/edu/index.js"]
+[INFO] 2014-09-11 19:51:47.879	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/setting/permission/index.html js file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/setting/permission/index.js"]
+[INFO] 2014-09-11 19:51:47.880	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/setting/profile/index.html js file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/setting/profile/index.js"]
+[INFO] 2014-09-11 19:51:47.881	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/setting/tab/index.html js file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/setting/tab/index.js"]
+[INFO] 2014-09-11 19:51:47.882	-	tp_ for D:/workspace/git/nej-demo/webapp/src/html/module/tab/index.html js file list -> ["D:/workspace/git/nej-demo/webapp/src/html/module/tab/index.js"]
+[INFO] 2014-09-11 19:51:47.884	-	OBF-0 -> merge source code
+[INFO] 2014-09-11 19:51:48.47	-	OBF-1 -> merge AST
+[INFO] 2014-09-11 19:51:48.48	-	OBF-2 -> compress source code
+[WARN] 2014-09-11 19:51:48.185	-	Dropping unused function argument _r [core:203,29]
+[WARN] 2014-09-11 19:51:48.186	-	Dropping unused function argument _f [core:203,26]
+[WARN] 2014-09-11 19:51:48.187	-	Dropping unused function argument _o [core:203,23]
+[WARN] 2014-09-11 19:51:48.191	-	Dropping unused function argument _r [core:391,30]
+[WARN] 2014-09-11 19:51:48.192	-	Dropping unused function argument _f [core:391,27]
+[WARN] 2014-09-11 19:51:48.193	-	Dropping unused function argument _o [core:391,24]
+[WARN] 2014-09-11 19:51:48.194	-	Dropping unused function argument _p [core:391,21]
+[WARN] 2014-09-11 19:51:48.195	-	Dropping unused function argument _m [core:391,18]
+[WARN] 2014-09-11 19:51:48.202	-	Dropping unused function argument _r [core:453,31]
+[WARN] 2014-09-11 19:51:48.205	-	Dropping unused function argument _this [core:884,36]
+[WARN] 2014-09-11 19:51:48.227	-	Dropping unused function argument _r [core:667,31]
+[WARN] 2014-09-11 19:51:48.231	-	Dropping unused function argument m [core:2059,29]
+[WARN] 2014-09-11 19:51:48.233	-	Dropping unused function argument _r [core:1993,32]
+[WARN] 2014-09-11 19:51:48.234	-	Dropping unused function argument _f [core:1993,29]
+[WARN] 2014-09-11 19:51:48.237	-	Dropping unused function argument _r [core:2084,30]
+[WARN] 2014-09-11 19:51:48.238	-	Dropping unused function argument _f [core:2084,27]
+[WARN] 2014-09-11 19:51:48.240	-	Dropping unused function argument _r [core:2099,32]
+[WARN] 2014-09-11 19:51:48.241	-	Dropping unused function argument _f [core:2099,29]
+[WARN] 2014-09-11 19:51:48.242	-	Dropping unused function argument _o [core:2099,26]
+[WARN] 2014-09-11 19:51:48.244	-	Dropping unused function argument _r [core:2193,32]
+[WARN] 2014-09-11 19:51:48.245	-	Dropping unused function argument _f [core:2193,29]
+[WARN] 2014-09-11 19:51:48.246	-	Dropping unused function argument _o [core:2193,26]
+[WARN] 2014-09-11 19:51:48.251	-	Dropping unused function argument _r [core:2340,31]
+[WARN] 2014-09-11 19:51:48.252	-	Dropping unused function argument _f [core:2340,28]
+[WARN] 2014-09-11 19:51:48.253	-	Dropping unused function argument _o [core:2340,25]
+[WARN] 2014-09-11 19:51:48.261	-	Dropping unused function argument _r [core:2455,34]
+[WARN] 2014-09-11 19:51:48.262	-	Dropping unused function argument _f [core:2455,31]
+[WARN] 2014-09-11 19:51:48.263	-	Dropping unused function argument _o [core:2455,28]
+[WARN] 2014-09-11 19:51:48.263	-	Dropping unused function argument _p [core:2455,25]
+[WARN] 2014-09-11 19:51:48.264	-	Dropping unused function argument _p_ [core:2455,21]
+[WARN] 2014-09-11 19:51:48.275	-	Dropping unused function argument _r [core:2693,40]
+[WARN] 2014-09-11 19:51:48.277	-	Dropping unused function argument _f [core:2693,37]
+[WARN] 2014-09-11 19:51:48.288	-	Dropping unused function argument _r [core:3478,31]
+[WARN] 2014-09-11 19:51:48.290	-	Dropping unused function argument _f [core:3478,28]
+[WARN] 2014-09-11 19:51:48.299	-	Dropping unused function argument _event [core:4064,32]
+[WARN] 2014-09-11 19:51:48.307	-	Dropping unused function argument _r [core:3875,33]
+[WARN] 2014-09-11 19:51:48.308	-	Dropping unused function argument _f [core:3875,30]
+[WARN] 2014-09-11 19:51:48.309	-	Dropping unused function argument _o [core:3875,27]
+[WARN] 2014-09-11 19:51:48.310	-	Dropping unused function argument _p [core:3875,24]
+[WARN] 2014-09-11 19:51:48.330	-	Side effects in initialization of unused variable _seed [core:6015,0]
+[WARN] 2014-09-11 19:51:48.335	-	Dropping unused function argument _r [core:4307,43]
+[WARN] 2014-09-11 19:51:48.336	-	Dropping unused function argument _f [core:4307,40]
+[WARN] 2014-09-11 19:51:48.354	-	Dropping unused function argument _r [core:7050,44]
+[WARN] 2014-09-11 19:51:48.357	-	Dropping unused function argument _r [core:7373,28]
+[WARN] 2014-09-11 19:51:48.358	-	Dropping unused function argument _f [core:7373,25]
+[WARN] 2014-09-11 19:51:48.359	-	Dropping unused function argument _o [core:7373,22]
+[WARN] 2014-09-11 19:51:48.361	-	Dropping unused function argument _r [core:7430,31]
+[WARN] 2014-09-11 19:51:48.362	-	Dropping unused function argument _f [core:7430,28]
+[WARN] 2014-09-11 19:51:48.363	-	Dropping unused function argument _o [core:7430,25]
+[WARN] 2014-09-11 19:51:48.364	-	Dropping unused function argument _hash [core:7496,28]
+[WARN] 2014-09-11 19:51:48.370	-	Dropping unused function argument _r [core:7501,34]
+[WARN] 2014-09-11 19:51:48.371	-	Dropping unused function argument _f [core:7501,31]
+[WARN] 2014-09-11 19:51:48.372	-	Dropping unused function argument _o [core:7501,28]
+[WARN] 2014-09-11 19:51:48.373	-	Dropping unused function argument _p [core:7501,25]
+[WARN] 2014-09-11 19:51:48.374	-	Dropping unused function argument _p_ [core:7501,21]
+[WARN] 2014-09-11 19:51:48.377	-	Dropping unused function argument _href [core:7623,33]
+[WARN] 2014-09-11 19:51:48.381	-	Dropping unused function argument _r [core:7555,44]
+[WARN] 2014-09-11 19:51:48.382	-	Dropping unused function argument _f [core:7555,41]
+[WARN] 2014-09-11 19:51:48.383	-	Dropping unused function argument _o [core:7555,38]
+[WARN] 2014-09-11 19:51:48.408	-	Dropping unused function argument _r [core:8326,41]
+[WARN] 2014-09-11 19:51:48.409	-	Dropping unused function argument _f [core:8326,38]
+[WARN] 2014-09-11 19:51:48.410	-	Dropping unused function argument _o [core:8326,35]
+[WARN] 2014-09-11 19:51:48.414	-	Dropping unused function argument _error [core:8734,31]
+[WARN] 2014-09-11 19:51:48.417	-	Dropping unused function argument i [core:8887,17]
+[WARN] 2014-09-11 19:51:48.419	-	Dropping unused function argument _r [core:8498,44]
+[WARN] 2014-09-11 19:51:48.422	-	Dropping unused function argument _r [core:8899,32]
+[WARN] 2014-09-11 19:51:48.423	-	Dropping unused function argument _f [core:8899,29]
+[WARN] 2014-09-11 19:51:48.478	-	Dropping unused function argument _r [core:9018,51]
+[WARN] 2014-09-11 19:51:48.479	-	Dropping unused function argument _r [core:9229,25]
+[WARN] 2014-09-11 19:51:48.480	-	Dropping unused function argument _f [core:9229,22]
+[WARN] 2014-09-11 19:51:48.481	-	Dropping unused function argument _o [core:9229,19]
+[WARN] 2014-09-11 19:51:48.483	-	Dropping unused function argument _r [core:9239,34]
+[WARN] 2014-09-11 19:51:48.484	-	Dropping unused function argument _f [core:9239,31]
+[WARN] 2014-09-11 19:51:48.485	-	Dropping unused function argument _o [core:9239,28]
+[WARN] 2014-09-11 19:51:48.485	-	Dropping unused function argument _p [core:9239,25]
+[WARN] 2014-09-11 19:51:48.486	-	Dropping unused function argument _p_ [core:9239,21]
+[WARN] 2014-09-11 19:51:48.490	-	Dropping unused function argument _r [core:9271,40]
+[WARN] 2014-09-11 19:51:48.492	-	Dropping unused function argument _r [core:9431,28]
+[WARN] 2014-09-11 19:51:48.493	-	Dropping unused function argument _f [core:9431,25]
+[WARN] 2014-09-11 19:51:48.494	-	Dropping unused function argument _o [core:9431,22]
+[WARN] 2014-09-11 19:51:48.501	-	Dropping unused function argument _wmode [core:9448,36]
+[WARN] 2014-09-11 19:51:48.502	-	Dropping unused function argument _wmode [core:9458,36]
+[WARN] 2014-09-11 19:51:48.503	-	Dropping unused function argument _r [core:9442,30]
+[WARN] 2014-09-11 19:51:48.504	-	Dropping unused function argument _f [core:9442,27]
+[WARN] 2014-09-11 19:51:48.505	-	Dropping unused function argument _o [core:9442,24]
+[WARN] 2014-09-11 19:51:48.506	-	Dropping unused function argument _p [core:9442,21]
+[WARN] 2014-09-11 19:51:48.507	-	Dropping unused function argument _m [core:9442,18]
+[WARN] 2014-09-11 19:51:48.512	-	Dropping unused function argument _r [core:9464,55]
+[WARN] 2014-09-11 19:51:48.513	-	Dropping unused function argument _f [core:9464,52]
+[WARN] 2014-09-11 19:51:48.514	-	Dropping unused function argument _o [core:9464,49]
+[WARN] 2014-09-11 19:51:48.516	-	Dropping unused function argument _list [core:9712,31]
+[WARN] 2014-09-11 19:51:48.517	-	Dropping unused function argument _index [core:9712,24]
+[WARN] 2014-09-11 19:51:48.519	-	Dropping unused function argument _r [core:9637,40]
+[WARN] 2014-09-11 19:51:48.520	-	Dropping unused function argument _f [core:9637,37]
+[WARN] 2014-09-11 19:51:48.520	-	Dropping unused function argument _o [core:9637,34]
+[WARN] 2014-09-11 19:51:48.522	-	Dropping unused function argument _r [core:9754,25]
+[WARN] 2014-09-11 19:51:48.523	-	Dropping unused function argument _f [core:9754,22]
+[WARN] 2014-09-11 19:51:48.527	-	Dropping unused function argument _r [core:9796,37]
+[WARN] 2014-09-11 19:51:48.528	-	Dropping unused function argument _f [core:9796,34]
+[WARN] 2014-09-11 19:51:48.530	-	Dropping unused function argument _r [core:9888,38]
+[WARN] 2014-09-11 19:51:48.531	-	Dropping unused function argument _f [core:9888,35]
+[WARN] 2014-09-11 19:51:48.535	-	Dropping unused function argument _r [core:9983,46]
+[WARN] 2014-09-11 19:51:48.536	-	Dropping unused function argument _f [core:9983,43]
+[WARN] 2014-09-11 19:51:48.537	-	Dropping unused function argument _o [core:9983,40]
+[WARN] 2014-09-11 19:51:48.542	-	Dropping unused function argument _error [core:10227,17]
+[WARN] 2014-09-11 19:51:48.544	-	Side effects in initialization of unused variable _headers [core:10239,0]
+[WARN] 2014-09-11 19:51:48.546	-	Dropping unused function argument _r [core:10100,51]
+[WARN] 2014-09-11 19:51:48.547	-	Dropping unused function argument _f [core:10100,48]
+[WARN] 2014-09-11 19:51:48.548	-	Dropping unused function argument _r [core:10286,41]
+[WARN] 2014-09-11 19:51:48.549	-	Dropping unused function argument _f [core:10286,38]
+[WARN] 2014-09-11 19:51:48.551	-	Dropping unused function argument _o [core:10286,35]
+[WARN] 2014-09-11 19:51:48.553	-	Dropping unused function argument _r [core:10306,31]
+[WARN] 2014-09-11 19:51:48.554	-	Dropping unused function argument _f [core:10306,28]
+[WARN] 2014-09-11 19:51:48.555	-	Dropping unused function argument _o [core:10306,25]
+[WARN] 2014-09-11 19:51:48.556	-	Dropping unused function argument _p [core:10306,22]
+[WARN] 2014-09-11 19:51:48.557	-	Dropping unused function argument _p_ [core:10306,18]
+[WARN] 2014-09-11 19:51:48.562	-	Dropping unused function argument _r [core:10329,44]
+[WARN] 2014-09-11 19:51:48.563	-	Dropping unused function argument _r [core:10689,37]
+[WARN] 2014-09-11 19:51:48.564	-	Dropping unused function argument _f [core:10689,34]
+[WARN] 2014-09-11 19:51:48.565	-	Dropping unused function argument _o [core:10689,31]
+[WARN] 2014-09-11 19:51:48.566	-	Dropping unused function argument _r [core:10742,28]
+[WARN] 2014-09-11 19:51:48.568	-	Dropping unused function argument _f [core:10742,25]
+[WARN] 2014-09-11 19:51:48.569	-	Dropping unused function argument _o [core:10742,22]
+[WARN] 2014-09-11 19:51:48.570	-	Dropping unused function argument _r [core:10753,33]
+[WARN] 2014-09-11 19:51:48.571	-	Dropping unused function argument _f [core:10753,30]
+[WARN] 2014-09-11 19:51:48.572	-	Dropping unused function argument _o [core:10753,27]
+[WARN] 2014-09-11 19:51:48.573	-	Dropping unused function argument _p [core:10753,24]
+[WARN] 2014-09-11 19:51:48.574	-	Dropping unused function argument _m [core:10753,21]
+[WARN] 2014-09-11 19:51:48.577	-	Dropping unused function argument _r [core:10765,37]
+[WARN] 2014-09-11 19:51:48.577	-	Dropping unused function argument _f [core:10765,34]
+[WARN] 2014-09-11 19:51:48.579	-	Dropping unused function argument _r [core:10840,34]
+[WARN] 2014-09-11 19:51:48.580	-	Dropping unused function argument _f [core:10840,31]
+[WARN] 2014-09-11 19:51:48.581	-	Dropping unused function argument _o [core:10840,28]
+[WARN] 2014-09-11 19:51:48.583	-	Dropping unused function argument _r [core:10876,34]
+[WARN] 2014-09-11 19:51:48.584	-	Dropping unused function argument _f [core:10876,31]
+[WARN] 2014-09-11 19:51:48.585	-	Dropping unused function argument _o [core:10876,28]
+[WARN] 2014-09-11 19:51:48.587	-	Dropping unused function argument _r [core:10935,45]
+[WARN] 2014-09-11 19:51:48.588	-	Dropping unused function argument _f [core:10935,42]
+[WARN] 2014-09-11 19:51:48.589	-	Dropping unused function argument _o [core:10935,39]
+[WARN] 2014-09-11 19:51:48.598	-	Dropping unused function argument _r [core:11150,54]
+[WARN] 2014-09-11 19:51:48.599	-	Dropping unused function argument _f [core:11150,51]
+[WARN] 2014-09-11 19:51:48.607	-	Dropping unused function argument _r [core:11669,38]
+[WARN] 2014-09-11 19:51:48.607	-	Dropping unused function argument _f [core:11669,35]
+[WARN] 2014-09-11 19:51:48.609	-	Dropping unused function argument _o [core:11669,32]
+[WARN] 2014-09-11 19:51:48.616	-	Dropping unused function argument _r [core:11895,36]
+[WARN] 2014-09-11 19:51:48.624	-	Dropping unused function argument _r [core:12094,52]
+[WARN] 2014-09-11 19:51:48.625	-	Dropping unused function argument _f [core:12094,49]
+[WARN] 2014-09-11 19:51:48.628	-	Dropping unused function argument _r [core:12427,39]
+[WARN] 2014-09-11 19:51:48.629	-	Dropping unused function argument _f [core:12427,36]
+[WARN] 2014-09-11 19:51:48.645	-	Dropping unused function argument _r [core:12601,72]
+[WARN] 2014-09-11 19:51:48.650	-	Dropping unused function argument _r [core:13804,46]
+[WARN] 2014-09-11 19:51:48.652	-	Dropping unused function argument _r [core:14175,31]
+[WARN] 2014-09-11 19:51:48.654	-	Dropping unused function argument _f [core:14175,28]
+[WARN] 2014-09-11 19:51:48.656	-	Dropping unused function argument _r [core:14216,41]
+[WARN] 2014-09-11 19:51:48.657	-	Dropping unused function argument _f [core:14216,38]
+[WARN] 2014-09-11 19:51:48.658	-	Dropping unused function argument _o [core:14216,35]
+[WARN] 2014-09-11 19:51:48.660	-	Dropping unused function argument _r [core:14320,25]
+[WARN] 2014-09-11 19:51:48.662	-	Dropping unused function argument _r [core:14369,34]
+[WARN] 2014-09-11 19:51:48.663	-	Dropping unused function argument _f [core:14369,31]
+[WARN] 2014-09-11 19:51:48.664	-	Dropping unused function argument _o [core:14369,28]
+[WARN] 2014-09-11 19:51:48.665	-	Dropping unused function argument _p [core:14369,25]
+[WARN] 2014-09-11 19:51:48.666	-	Dropping unused function argument _p_ [core:14369,21]
+[WARN] 2014-09-11 19:51:48.669	-	Dropping unused function argument _r [core:14451,41]
+[WARN] 2014-09-11 19:51:48.670	-	Dropping unused function argument _f [core:14451,38]
+[WARN] 2014-09-11 19:51:48.671	-	Dropping unused function argument _o [core:14451,35]
+[WARN] 2014-09-11 19:51:48.689	-	Dropping unused function argument _lkey [core:15774,44]
+[WARN] 2014-09-11 19:51:48.695	-	Dropping unused function argument _r [core:15010,38]
+[WARN] 2014-09-11 19:51:48.697	-	Dropping unused function argument _r [core:16040,35]
+[WARN] 2014-09-11 19:51:48.698	-	Dropping unused function argument _r [core:16295,31]
+[WARN] 2014-09-11 19:51:48.699	-	Dropping unused function argument _f [core:16295,28]
+[WARN] 2014-09-11 19:51:48.700	-	Dropping unused function argument _o [core:16295,25]
+[WARN] 2014-09-11 19:51:48.703	-	Dropping unused function argument _r [core:16322,37]
+[WARN] 2014-09-11 19:51:48.704	-	Dropping unused function argument _f [core:16322,34]
+[WARN] 2014-09-11 19:51:48.708	-	Dropping unused function argument _r [core:16396,45]
+[WARN] 2014-09-11 19:51:48.711	-	Dropping unused function argument _r [core:16636,35]
+[WARN] 2014-09-11 19:51:48.713	-	Dropping unused function argument _data [core:16900,26]
+[WARN] 2014-09-11 19:51:48.714	-	Dropping unused function argument _r [core:16820,36]
+[WARN] 2014-09-11 19:51:48.715	-	Dropping unused function argument _f [core:16820,33]
+[WARN] 2014-09-11 19:51:48.716	-	Dropping unused function argument _o [core:16820,30]
+[WARN] 2014-09-11 19:51:48.726	-	Dropping unused function argument _r [core:17247,44]
+[WARN] 2014-09-11 19:51:48.730	-	Dropping unused function argument _r [core:17699,41]
+[WARN] 2014-09-11 19:51:48.731	-	Dropping unused function argument _f [core:17699,38]
+[WARN] 2014-09-11 19:51:48.732	-	Dropping unused function argument _o [core:17699,35]
+[WARN] 2014-09-11 19:51:48.741	-	Dropping unused function argument _options [core:18540,32]
+[WARN] 2014-09-11 19:51:48.750	-	Dropping unused function argument _r [core:18004,65]
+[WARN] 2014-09-11 19:51:48.757	-	Dropping unused function argument _limit [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/list/index.html:172,51]
+[WARN] 2014-09-11 19:51:48.759	-	Dropping unused function argument _limit [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/list/index.html:255,39]
+[WARN] 2014-09-11 19:51:48.761	-	Dropping unused function argument _limit [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/list/index.html:281,40]
+[WARN] 2014-09-11 19:51:48.762	-	Dropping unused function argument _offset [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/list/index.html:281,32]
+[WARN] 2014-09-11 19:51:48.764	-	Dropping unused function argument _r [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/list/index.html:1,38]
+[WARN] 2014-09-11 19:51:48.764	-	Dropping unused function argument _f [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/list/index.html:1,35]
+[WARN] 2014-09-11 19:51:48.765	-	Dropping unused function argument _o [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/list/index.html:1,32]
+[WARN] 2014-09-11 19:51:48.767	-	Dropping unused function argument _r [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/list/index.html:300,48]
+[WARN] 2014-09-11 19:51:48.768	-	Dropping unused function argument _f [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/list/index.html:300,45]
+[WARN] 2014-09-11 19:51:48.770	-	Dropping unused function argument _r [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.box/index.html:1,46]
+[WARN] 2014-09-11 19:51:48.771	-	Dropping unused function argument _f [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.box/index.html:1,43]
+[WARN] 2014-09-11 19:51:48.773	-	Dropping unused function argument _r [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.tag/index.html:1,53]
+[WARN] 2014-09-11 19:51:48.774	-	Dropping unused function argument _f [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.tag/index.html:1,50]
+[WARN] 2014-09-11 19:51:48.775	-	Dropping unused function argument _o [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/list.tag/index.html:1,47]
+[WARN] 2014-09-11 19:51:48.777	-	Dropping unused function argument _r [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/tab/index.html:1,46]
+[WARN] 2014-09-11 19:51:48.777	-	Dropping unused function argument _f [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/tab/index.html:1,43]
+[WARN] 2014-09-11 19:51:48.778	-	Dropping unused function argument _o [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/tab/index.html:1,40]
+[WARN] 2014-09-11 19:51:48.791	-	Dropping unused function argument _limit [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/tag/index.html:419,39]
+[WARN] 2014-09-11 19:51:48.796	-	Dropping unused function argument _r [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/tag/index.html:491,37]
+[WARN] 2014-09-11 19:51:48.796	-	Dropping unused function argument _f [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/tag/index.html:491,34]
+[WARN] 2014-09-11 19:51:48.798	-	Dropping unused function argument _r [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/tag/index.html:536,49]
+[WARN] 2014-09-11 19:51:48.799	-	Dropping unused function argument _f [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/tag/index.html:536,46]
+[WARN] 2014-09-11 19:51:48.800	-	Dropping unused function argument _o [tp_D:/workspace/git/nej-demo/webapp/src/html/module/blog/tag/index.html:536,43]
+[WARN] 2014-09-11 19:51:48.801	-	Dropping unused function argument _r [tp_D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog/index.html:1,42]
+[WARN] 2014-09-11 19:51:48.802	-	Dropping unused function argument _f [tp_D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog/index.html:1,39]
+[WARN] 2014-09-11 19:51:48.803	-	Dropping unused function argument _o [tp_D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog/index.html:1,36]
+[WARN] 2014-09-11 19:51:48.805	-	Dropping unused function argument _r [tp_D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog.list/index.html:1,42]
+[WARN] 2014-09-11 19:51:48.806	-	Dropping unused function argument _f [tp_D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog.list/index.html:1,39]
+[WARN] 2014-09-11 19:51:48.808	-	Dropping unused function argument _o [tp_D:/workspace/git/nej-demo/webapp/src/html/module/layout/blog.list/index.html:1,36]
+[WARN] 2014-09-11 19:51:48.809	-	Dropping unused function argument _r [tp_D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting/index.html:1,42]
+[WARN] 2014-09-11 19:51:48.811	-	Dropping unused function argument _f [tp_D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting/index.html:1,39]
+[WARN] 2014-09-11 19:51:48.812	-	Dropping unused function argument _o [tp_D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting/index.html:1,36]
+[WARN] 2014-09-11 19:51:48.814	-	Dropping unused function argument _r [tp_D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting.account/index.html:1,42]
+[WARN] 2014-09-11 19:51:48.815	-	Dropping unused function argument _f [tp_D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting.account/index.html:1,39]
+[WARN] 2014-09-11 19:51:48.816	-	Dropping unused function argument _o [tp_D:/workspace/git/nej-demo/webapp/src/html/module/layout/setting.account/index.html:1,36]
+[WARN] 2014-09-11 19:51:48.818	-	Dropping unused function argument _options [tp_D:/workspace/git/nej-demo/webapp/src/html/module/layout/system/index.html:17,32]
+[WARN] 2014-09-11 19:51:48.819	-	Dropping unused function argument _r [tp_D:/workspace/git/nej-demo/webapp/src/html/module/layout/system/index.html:1,42]
+[WARN] 2014-09-11 19:51:48.821	-	Dropping unused function argument _f [tp_D:/workspace/git/nej-demo/webapp/src/html/module/layout/system/index.html:1,39]
+[WARN] 2014-09-11 19:51:48.822	-	Dropping unused function argument _o [tp_D:/workspace/git/nej-demo/webapp/src/html/module/layout/system/index.html:1,36]
+[WARN] 2014-09-11 19:51:48.824	-	Dropping unused function argument _r [tp_D:/workspace/git/nej-demo/webapp/src/html/module/setting/account.tab/index.html:1,46]
+[WARN] 2014-09-11 19:51:48.826	-	Dropping unused function argument _f [tp_D:/workspace/git/nej-demo/webapp/src/html/module/setting/account.tab/index.html:1,43]
+[WARN] 2014-09-11 19:51:48.827	-	Dropping unused function argument _o [tp_D:/workspace/git/nej-demo/webapp/src/html/module/setting/account.tab/index.html:1,40]
+[WARN] 2014-09-11 19:51:48.828	-	Dropping unused function argument _r [tp_D:/workspace/git/nej-demo/webapp/src/html/module/setting/edu/index.html:1,43]
+[WARN] 2014-09-11 19:51:48.829	-	Dropping unused function argument _f [tp_D:/workspace/git/nej-demo/webapp/src/html/module/setting/edu/index.html:1,40]
+[WARN] 2014-09-11 19:51:48.831	-	Dropping unused function argument _o [tp_D:/workspace/git/nej-demo/webapp/src/html/module/setting/edu/index.html:1,37]
+[WARN] 2014-09-11 19:51:48.833	-	Dropping unused function argument _r [tp_D:/workspace/git/nej-demo/webapp/src/html/module/setting/permission/index.html:1,46]
+[WARN] 2014-09-11 19:51:48.834	-	Dropping unused function argument _f [tp_D:/workspace/git/nej-demo/webapp/src/html/module/setting/permission/index.html:1,43]
+[WARN] 2014-09-11 19:51:48.835	-	Dropping unused function argument _o [tp_D:/workspace/git/nej-demo/webapp/src/html/module/setting/permission/index.html:1,40]
+[WARN] 2014-09-11 19:51:48.837	-	Dropping unused function argument _r [tp_D:/workspace/git/nej-demo/webapp/src/html/module/setting/profile/index.html:1,46]
+[WARN] 2014-09-11 19:51:48.838	-	Dropping unused function argument _f [tp_D:/workspace/git/nej-demo/webapp/src/html/module/setting/profile/index.html:1,43]
+[WARN] 2014-09-11 19:51:48.839	-	Dropping unused function argument _o [tp_D:/workspace/git/nej-demo/webapp/src/html/module/setting/profile/index.html:1,40]
+[WARN] 2014-09-11 19:51:48.841	-	Dropping unused function argument _r [tp_D:/workspace/git/nej-demo/webapp/src/html/module/setting/tab/index.html:1,47]
+[WARN] 2014-09-11 19:51:48.842	-	Dropping unused function argument _f [tp_D:/workspace/git/nej-demo/webapp/src/html/module/setting/tab/index.html:1,44]
+[WARN] 2014-09-11 19:51:48.843	-	Dropping unused function argument _o [tp_D:/workspace/git/nej-demo/webapp/src/html/module/setting/tab/index.html:1,41]
+[WARN] 2014-09-11 19:51:48.844	-	Dropping unused function argument _r [tp_D:/workspace/git/nej-demo/webapp/src/html/module/tab/index.html:1,47]
+[WARN] 2014-09-11 19:51:48.845	-	Dropping unused function argument _f [tp_D:/workspace/git/nej-demo/webapp/src/html/module/tab/index.html:1,44]
+[WARN] 2014-09-11 19:51:48.846	-	Dropping unused function argument _o [tp_D:/workspace/git/nej-demo/webapp/src/html/module/tab/index.html:1,41]
+[INFO] 2014-09-11 19:51:48.847	-	OBF-3 -> mangle local variables
+[INFO] 2014-09-11 19:51:49.84	-	OBF-4 -> try mangle nej api
+[INFO] 2014-09-11 19:51:49.383	-	OBF-5 -> output minified code
+[INFO] 2014-09-11 19:51:49.476	-	OBF-6 -> obfuscate done
+[INFO] 2014-09-11 19:51:49.479	-	output D:/workspace/git/nej-demo/deploy/names.json
+[INFO] 2014-09-11 19:51:49.482	-	output D:/workspace/git/nej-demo/webapp/pub/core.js
+[INFO] 2014-09-11 19:51:49.493	-	output D:/workspace/git/nej-demo/webapp/pub/app.html
+[INFO] 2014-09-11 19:51:49.495	-	output D:/workspace/git/nej-demo/webapp/pub/module/blog/list/index.html
+[INFO] 2014-09-11 19:51:49.497	-	output D:/workspace/git/nej-demo/webapp/pub/module/blog/list.box/index.html
+[INFO] 2014-09-11 19:51:49.499	-	output D:/workspace/git/nej-demo/webapp/pub/module/blog/list.tag/index.html
+[INFO] 2014-09-11 19:51:49.501	-	output D:/workspace/git/nej-demo/webapp/pub/module/blog/tab/index.html
+[INFO] 2014-09-11 19:51:49.503	-	output D:/workspace/git/nej-demo/webapp/pub/module/blog/tag/index.html
+[INFO] 2014-09-11 19:51:49.505	-	output D:/workspace/git/nej-demo/webapp/pub/module/blog.html
+[INFO] 2014-09-11 19:51:49.507	-	output D:/workspace/git/nej-demo/webapp/pub/module/layout/blog/index.html
+[INFO] 2014-09-11 19:51:49.509	-	output D:/workspace/git/nej-demo/webapp/pub/module/layout/blog.list/index.html
+[INFO] 2014-09-11 19:51:49.512	-	output D:/workspace/git/nej-demo/webapp/pub/module/layout/setting/index.html
+[INFO] 2014-09-11 19:51:49.514	-	output D:/workspace/git/nej-demo/webapp/pub/module/layout/setting.account/index.html
+[INFO] 2014-09-11 19:51:49.515	-	output D:/workspace/git/nej-demo/webapp/pub/module/layout/system/index.html
+[INFO] 2014-09-11 19:51:49.517	-	output D:/workspace/git/nej-demo/webapp/pub/module/layout.html
+[INFO] 2014-09-11 19:51:49.519	-	output D:/workspace/git/nej-demo/webapp/pub/module/setting/account.tab/index.html
+[INFO] 2014-09-11 19:51:49.521	-	output D:/workspace/git/nej-demo/webapp/pub/module/setting/edu/index.html
+[INFO] 2014-09-11 19:51:49.523	-	output D:/workspace/git/nej-demo/webapp/pub/module/setting/permission/index.html
+[INFO] 2014-09-11 19:51:49.525	-	output D:/workspace/git/nej-demo/webapp/pub/module/setting/profile/index.html
+[INFO] 2014-09-11 19:51:49.527	-	output D:/workspace/git/nej-demo/webapp/pub/module/setting/tab/index.html
+[INFO] 2014-09-11 19:51:49.528	-	output D:/workspace/git/nej-demo/webapp/pub/module/setting.html
+[INFO] 2014-09-11 19:51:49.532	-	output D:/workspace/git/nej-demo/webapp/pub/module/tab/index.html
+[INFO] 2014-09-11 19:51:49.534	-	release done! view release log D:/workspace/git/nej-demo/deploy/20140911.195147323.txt
